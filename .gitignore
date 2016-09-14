@@ -1,0 +1,12 @@
+/node_modules
+/public/storage
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+/nbprojects
+error.log
+start.sh
+optimize.sh
+scaffold.sh

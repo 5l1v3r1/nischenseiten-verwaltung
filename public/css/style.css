@@ -1,0 +1,133 @@
+/*#idea-search {
+    margin-bottom: 20px; 
+
+    .idea-search-submit-btn {
+        width:100%;
+    }
+}
+.idea-pagination {
+    ul {
+        margin-top:0;
+    }
+}
+
+#message {
+    display:none;
+}
+
+.delete-idea,.delete-category {
+    color:#a94442
+}*/
+#top-buttons {
+  margin-bottom: 20px; }
+
+#idea-search .idea-search-submit-btn {
+  width: 100%; }
+
+.idea-pagination ul {
+  margin-top: 0; }
+
+#userlist-adder {
+  padding-bottom: 5px; }
+
+#message {
+  display: none;
+  position: fixed;
+  bottom: 0; }
+
+.tooltip-hover:hover {
+  cursor: pointer; }
+
+.green {
+  color: #4caf50; }
+
+.goes-down {
+  padding: 2px;
+  background: #a94442;
+  color: #fff;
+  white-space: pre; }
+
+.goes-up {
+  padding: 2px;
+  background: #4caf50;
+  color: #fff;
+  white-space: pre; }
+
+.red {
+  color: #a94442; }
+
+#idea-panel,
+#backlink-panel,
+#user-panel,
+#project-panel,
+#category-panel,
+#partnerprogram-panel,
+#projectnotes-panel,
+#projectcontent-panel,
+#projectcompetition-panel,
+#projectkeyword-panel {
+  margin-top: 20px; }
+
+#idea-panel a,
+#user-panel a,
+#backlink-panel a,
+#project-panel a,
+#category-panel a,
+#partnerprogram-panel a,
+#projectnotes-panel a,
+#projectcontent-panel a,
+#projectcompetition-panel a,
+#projectkeyword-panel a {
+  color: #666; }
+
+#idea-panel .delete-idea,
+#project-panel .delete-project,
+#backlink-panel .delete-backlink,
+#user-panel .delete-user,
+#category-panel .delete-category,
+#partnerprogram-panel .delete-partnerprogram,
+#projectnotes-panel .delete-projectnote,
+#projectcontent-panel .delete-projectcontent,
+#projectcompetition-panel .delete-projectcompetition,
+#projectkeyword-panel .delete-projectkeyword {
+  color: #a94442; }
+
+#projectnotes-panel .archive-projectnote,
+#projectcontent-panel .archive-projectcontent {
+  color: #4caf50; }
+
+#dashboard .panel-success a {
+  color: #4caf50; }
+#dashboard .panel-success a:hover {
+  color: #327334; }
+
+#optionmessages {
+  margin-top: 20px; }
+
+.datepicker .next i {
+  color: grey; }
+
+.icon-arrow-right:after {
+  content: "\00BB"; }
+
+.icon-arrow-left:before {
+  content: "\00AB"; }
+
+#ranking-panel #ranking-table_filter {
+  float: right; }
+#ranking-panel #ranking-table_wrapper .pagination {
+  float: right;
+  margin-top: 0; }
+
+@media (min-width: 1360px) {
+  .container {
+    width: 1300px !important; }
+
+  .large {
+    font-size: 20px; } }
+@media (min-width: 1900px) {
+  .container {
+    width: 1600px !important; }
+
+  .large {
+    font-size: 24px; } }
