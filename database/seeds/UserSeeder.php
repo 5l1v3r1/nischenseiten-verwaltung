@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
 //        DB::table('users')->insert([
 //            'name'       => 'Testmember',
 //            'email'      => 'member@ds.de',
-//            'password'   => bcrypt('damsch'),
+//            'password'   => bcrypt('test'),
 //            'role_id'    => 2,
 //            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
 //            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
