@@ -41,7 +41,7 @@ Zur Installation kann man einen der beiden Wege wählen - der erste Weg richtet 
 
 
 ## via Dump und zip-Datei
-1. Lade das fertige Paket HIER (Link folgt) herunter und entpacke es auf deinem Webspace
+1. Lade das fertige Paket <a href="https://www.damianschwyrz.de/download/master-nst.zip">**HIER**</a> herunter und entpacke es auf deinem Webspace
 2. Importier die install/sqldump.sql in deine Datenbank
 3. pass die ".env"-Datei an und speichere sie ab
 4. Die Ordner /storage und /bootstrap/cache müsste auch chmod 777 stehen
