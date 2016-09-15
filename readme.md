@@ -17,11 +17,12 @@ Das Tool wurde auf Basis des PHP Frameworks <a href="https://github.com/laravel/
 - <a href="#aktueller-stand-des-tools">Changelog</a>
 - <a href="#todos">ToDo</a>
 - <a href="#autorprogrammierer">Autor</a>
+- <a href="#bedanken">Bei mir bedanken :)</a>
 
 
 # Anforderungen
 
-1. Webspace mit min. **PHP 5.6.4** (programmiert wurde auf Basis von PHP 7.1)
+1. Webspace mit min. **PHP 5.6.4** (PHP 7.1 wird empfohlen)
 2. Eine **MySQL** Datenbank
 3. (optional) wer die Funktionen, wie auto. oder manuelle Keyword-Aktualisierung, Rankingimport, Searchindex nutzen will, braucht einen **<a href="https://metrics.tools/x/hufe">Pro-Account von api.metrics</a>**. 
 4. (optional) Möglichkeit **Cronjobs** auszuführen
@@ -140,3 +141,8 @@ Hi, ich bin Damian, ich programmiere liebend gern in PHP. Mehr zu mir findest du
 - E-Mail-Adresse: mail |at| damianschwyrz |.| de
 - Facebook: https://www.facebook.com/naimad.zwial
 - LinkedIn: https://de.linkedin.com/in/damianschwyrz
+
+# So kannst du dich bei mir bedanken
+Falls dir das Tool gefällt und du es geil findest, dass sich da jemand Tage hinsetzt, was programmiert und es allen kostenlos zur Verfügung steht, kannst du dich gerne bei mir bedanken. Über eine E-Mail freue ich mich immer :) Alternativ kannst du auch folgendes machen:
+1. wenn du die Ranking/Keyword-Funktionen nutzen willst, brauchst du einen Key von api.metrics - bestellst du einen Account, bekomme ich 20%: 
+2. jeder braucht Webspace für seine Seiten - all-inkl.com ist da immer eine Empfehlung - bekommst du hier: https://all-inkl.com/?partner=507458 (und ich einige Euro aufs Konto)
