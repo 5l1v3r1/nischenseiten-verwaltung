@@ -17,7 +17,7 @@ Das Tool wurde auf Basis des PHP Frameworks <a href="https://github.com/laravel/
 - <a href="#aktueller-stand-des-tools">Changelog</a>
 - <a href="#todos">ToDo</a>
 - <a href="#autorprogrammierer">Autor</a>
-- <a href="#bedanken">Bei mir bedanken :)</a>
+- <a href="#so-kannst-du-dich-bei-mir-bedanken">Bei mir bedanken :)</a>
 
 
 # Anforderungen
@@ -144,5 +144,5 @@ Hi, ich bin Damian, ich programmiere liebend gern in PHP. Mehr zu mir findest du
 
 # So kannst du dich bei mir bedanken
 Falls dir das Tool gefällt und du es geil findest, dass sich da jemand Tage hinsetzt, was programmiert und es allen kostenlos zur Verfügung steht, kannst du dich gerne bei mir bedanken. Über eine E-Mail freue ich mich immer :) Alternativ kannst du auch folgendes machen:
-1. wenn du die Ranking/Keyword-Funktionen nutzen willst, brauchst du einen Key von api.metrics - bestellst du einen Account, bekomme ich 20%: 
+1. wenn du die Ranking/Keyword-Funktionen nutzen willst, brauchst du einen Key von api.metrics - bestellst du einen Account, bekomme ich 20%: https://metrics.tools/x/hufe
 2. jeder braucht Webspace für seine Seiten - all-inkl.com ist da immer eine Empfehlung - bekommst du hier: https://all-inkl.com/?partner=507458 (und ich einige Euro aufs Konto)
