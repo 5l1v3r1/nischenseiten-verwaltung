@@ -131,4 +131,8 @@ Die Demo-Seite wird sicherlich 3-4 Wochen online sein und danach vom Netz genomm
 - Allgemeines Dashboard ausbauen (mehr Kennzahlen zu Projekten)
 
 # Autor/Programmierer
-<div style="max-width:50px"><img src="https://www.damianschwyrz.de/wp-content/uploads/2016/01/Untitled.png"></div>Hi, ich bin Damian, ich programmiere liebend gern in PHP. Mehr zu mir findest du auf meiner Seite: <a href="https://www.damianschwyrz.de/">damianschwyrz.de</a>
+Hi, ich bin Damian, ich programmiere liebend gern in PHP. Mehr zu mir findest du auf meiner Seite: <a href="https://www.damianschwyrz.de/">damianschwyrz.de</a>. Du kannst mich gerne für dein Projekt buchen - mein Fokus liegt auf WordPress sowie Laravel (oder Slim PHP). Referenzen und Co. gibt es ebenfalls auf meiner Seite ;).
+## Kontaktmöglichkeiten
+- E-Mail-Adresse: mail |at| damianschwyrz |.| de
+- Facebook: https://www.facebook.com/naimad.zwial
+- LinkedIn: https://de.linkedin.com/in/damianschwyrz
