@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#projectkeyword-table').on('click', '.delete-projectkeyword', function () {
+    $('#projectkeyword-table').on('click', '.delete-projectkeyword', function (event) {
+        event.preventDefault();
         var projectkeyword_pk = $(this).data('pk');
 
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");

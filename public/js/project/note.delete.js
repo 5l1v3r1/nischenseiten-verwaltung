@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#projectnotes-table').on('click', '.delete-projectnote', function () {
+    $('#projectnotes-table').on('click', '.delete-projectnote', function (event) {
+        event.preventDefault();
         var projectnote_pk = $(this).data('pk');
 
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");
@@ -25,7 +26,8 @@ $(document).ready(function () {
         }
     });
 
-    $('#projectnotes-table').on('click', '.archive-projectnote', function () {
+    $('#projectnotes-table').on('click', '.archive-projectnote', function (event) {
+        event.preventDefault();
         var projectnote_pk = $(this).data('pk');
         var really_delete = confirm("Soll der Eintrag wirklich archiviert werden?");
 

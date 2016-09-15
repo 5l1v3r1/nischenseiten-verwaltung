@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#backlink-table').on('click', '.delete-backlink', function () {
+    $('#backlink-table').on('click', '.delete-backlink', function (event) {
+        event.preventDefault();
         var backlink_pk = $(this).data('pk');
 
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");

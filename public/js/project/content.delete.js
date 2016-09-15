@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#projectcontent-table').on('click', '.delete-projectcontent', function () {
+    $('#projectcontent-table').on('click', '.delete-projectcontent', function (event) {
+        event.preventDefault();
         var projectcontent_pk = $(this).data('pk');
 
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");
@@ -25,7 +26,9 @@ $(document).ready(function () {
         }
     });
 
-    $('#projectcontent-table').on('click', '.archive-projectcontent', function () {
+    $('#projectcontent-table').on('click', '.archive-projectcontent', function (event) {
+        event.preventDefault();
+        
         var projectcontent_pk = $(this).data('pk');
         var really_delete = confirm("Soll der Eintrag wirklich archiviert werden?");
 

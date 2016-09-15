@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#projectkeyword-table').on('click', '.refresh-projectkeyword', function () {
+    $('#projectkeyword-table').on('click', '.refresh-projectkeyword', function (event) {
+        event.preventDefault();
         var projectkeyword_pk = $(this).data('pk');
         var current_button = $(this);
 

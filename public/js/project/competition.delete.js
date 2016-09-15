@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#projectcompetition-table').on('click', '.delete-projectcompetition', function () {
+    $('#projectcompetition-table').on('click', '.delete-projectcompetition', function (event) {
+        event.preventDefault();
         var projectcompetition_pk = $(this).data('pk');
 
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");
