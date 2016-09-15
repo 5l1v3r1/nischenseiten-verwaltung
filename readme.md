@@ -73,15 +73,35 @@ Folgende Cronjobs sehen zur Verfügung und man muss nur zusehen, dass man sie re
 **Interessant:** Der **<a href="https://metrics.tools/x/hufe">Pro-Account von api.metrics</a>** hat 50.000 Credits. Die Aktualisierung eines Keywords (CPC, SV, Comp.) kostet 5 Credits. Import von 100 Rankings kostet 100 Credits und der Import des Suchindex kostet 10 Credits. D.h. selbst wer 1000 Ideen/Keywords hat, der wird kaum über 10.000 Credits kommen. Im Webtool wird dir außerdem ständig angezeigt, wie viele Credits zu noch hast!
 
 # Screenshots
-Der erste Eindruck zählt, daher findet man im Folgenden einige Screenshots des Tools, die Daten kommen von meinem Portal https://fernseher-kaufberatung.com.
+Der erste Eindruck zählt, daher findet man im Folgenden einige Screenshots des Tools, die Daten kommen von meinem Portal https://fernseher-kaufberatung.com. Das sind natürlich nicht alle Teile des Tools, die Screenshots sollen einen kleinen Einblick geben!
 
 ## Übersicht (Dashboard)
 <img src="http://storage6.static.itmages.com/i/16/0915/h_1473935109_2419591_adc4bd7eac.jpeg">
 
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
+## Ideenverwaltung
+<img src="http://storage1.static.itmages.com/i/16/0915/h_1473935196_9637778_e945e0d01a.jpeg">
 
+## Verwaltung der Kategorien
+<img src="http://storage5.static.itmages.com/i/16/0915/h_1473935226_8916699_b2e8093840.jpeg">
+
+## Nutzerverwaltung
+<img src="http://storage9.static.itmages.com/i/16/0915/h_1473935257_8273956_65146e1624.jpeg">
+
+## Projektdashboard
+<img src="http://storage4.static.itmages.com/i/16/0915/h_1473935291_2932881_a8bef9fe5f.jpeg">
+
+## Rankings des Projekts
+<img src="http://storage6.static.itmages.com/i/16/0915/h_1473935320_1477432_9fbb19ab0d.jpeg">
+
+## Backlinks
+<img src="http://storage7.static.itmages.com/i/16/0915/h_1473935374_8745230_48e98ee159.jpeg">
+
+# Online Demo
+Wer sich das ganze Online anschauen will: http://test.damianschwyrz.de
+Logindaten:
+
+Username: test@test.de
+
+Password: test
+
+Die Demo-Seite wird sicherlich 3-4 Wochen online sein und danach vom Netz genommen.
