@@ -17,7 +17,7 @@ Das Tool wurde auf Basis des PHP Frameworks <a href="https://github.com/laravel/
 - <a href="#aktueller-stand-des-tools">Changelog</a>
 - <a href="#todos">ToDo</a>
 - <a href="#autorprogrammierer">Autor</a>
-- <a href="#so-kannst-du-dich-bei-mir-bedanken">Bei mir bedanken :)</a>
+- <a href="#so-kannst-du-dich-bei-mir-bedanken">Bei mir bedanken!</a>
 
 
 # Anforderungen
