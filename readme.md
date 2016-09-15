@@ -5,15 +5,15 @@ Mit diesem Tool lassen sich Onlineprojekte (**Contentportale, Nischenseiten, ...
 Das Tool wurde auf Basis des PHP Frameworks <a href="https://github.com/laravel/laravel">Laravel 5.3</a> programmiert. Für den Backlinkchecker sowie für den Zugriff auf die <a href="https://metrics.tools/x/hufe">**API von metrics.tools**</a> wird des Weiteren <a href="https://github.com/guzzle/guzzle">Guzzle</a> verwendet.
 
 # Inhaltsverzeichnis
-- Zusammenfassung
-- Anforderungen
-- Installation
-- Logindaten
-- Einstellungen
-- Cronjobs
-- Rechteverwaltung
-- Screenshots
-- Onlinedemo
+- <a href="#tool-zum-verwalten-von-nischenseitenwebprojekten">Zusammenfassung</a>
+- <a href="#anforderungen">Anforderungen</a>
+- <a href="#installation-des-tools">Installation</a>
+- <a href="#logindaten">Logindaten</a>
+- <a href="#erste-einstellungen">Einstellungen</a>
+- <a href="#cronjobs-einrichten">Cronjobs</a>
+- <a href="#rechteverwaltung">Rechteverwaltung</a>
+- <a href="#screenshots">Screenshots</a>
+- <a href="#online-demo">Onlinedemo</a>
 
 # Anforderungen
 
@@ -58,9 +58,8 @@ location / {
 # Logindaten
 In beiden Fällen kann man sich dann als Administrator mit den folgenden Daten einloggen:
 
-**Nutzername:** test@test.de
-
-**Passwort:** test
+<br />**Nutzername:** test@test.de
+<br />**Passwort:** test
 
 Es lohnt sich diese Daten abzuändern.
 
@@ -114,10 +113,7 @@ Der erste Eindruck zählt, daher findet man im Folgenden einige Screenshots des 
 
 # Online Demo
 Wer sich das ganze Online anschauen will: http://test.damianschwyrz.de
-Logindaten:
-
-Username: test@test.de
-
-Password: test
+<br />Username: test@test.de
+<br />Password: test
 
 Die Demo-Seite wird sicherlich 3-4 Wochen online sein und danach vom Netz genommen.
