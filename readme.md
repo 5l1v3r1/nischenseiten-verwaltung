@@ -113,7 +113,22 @@ Der erste Eindruck zählt, daher findet man im Folgenden einige Screenshots des 
 
 # Online Demo
 Wer sich das ganze Online anschauen will: http://test.damianschwyrz.de
-<br />Username: test@test.de
-<br />Password: test
+<br />**Username:** test@test.de
+<br />**Password:** test
 
 Die Demo-Seite wird sicherlich 3-4 Wochen online sein und danach vom Netz genommen.
+
+# Aktueller Stand des Tools
+
+- 15.09.2016 - erster Release des Tools
+
+# ToDos
+- PHP Code dokumentieren
+- Tests schreiben, soweit möglich/sinnvoll
+- Responsiveness via Bootstrap noch nicht 100% gegeben
+- Localization (Englische Sprache/Deutsche Sprache)
+- vielleicht Sistrix integrieren
+- Allgemeines Dashboard ausbauen (mehr Kennzahlen zu Projekten)
+
+# Autor/Programmierer
+<div style="max-width:50px"><img src="https://www.damianschwyrz.de/wp-content/uploads/2016/01/Untitled.png"></div>Hi, ich bin Damian, ich programmiere liebend gern in PHP. Mehr zu mir findest du auf meiner Seite: <a href="https://www.damianschwyrz.de/">damianschwyrz.de</a>
