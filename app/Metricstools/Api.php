@@ -123,7 +123,7 @@ class Api
         try
         {
             $this->checkInput();
-
+            $this->stripWWW();
             $res          = $this->guzzle->request('GET', 'https://metrics.tools/metricstools/api/domain', [
                 'query' => [
                     'apikey' => trim($this->key),
@@ -155,6 +155,10 @@ class Api
         {
             throw new \Exception('No input (keyword, domain, ...) found');
         }
+    }
+    
+    private function stripWWW() {
+        $this->input = str_ireplace(['www.'], '', $this->input);
     }
 
 }

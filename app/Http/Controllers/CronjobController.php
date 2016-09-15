@@ -74,8 +74,8 @@ class CronjobController extends Controller
                 Log::info($project->name . ' - rankings(): keine Daten via API gefunden!');
                 Cache::forget($cache_name);
             }
-
-            sleep(2);
+            
+            sleep(1);
         }
 
 
@@ -116,7 +116,7 @@ class CronjobController extends Controller
             {
                 Log::info($keyword->name . ' - keywords(): keine Daten via API gefunden!');
             }
-
+            
             sleep(1);
         }
 
@@ -158,7 +158,7 @@ class CronjobController extends Controller
                 Log::info($project->name . ' - searchindex(): keine Daten via API gefunden!');
                 Cache::forget($cache_name);
             }
-
+            
             sleep(1);
         }
 
@@ -223,7 +223,7 @@ class CronjobController extends Controller
             {
                 Log::info($keyword->name . ' - ideas(): keine Daten via API gefunden!');
             }
-
+            
             sleep(1);
         }
 
