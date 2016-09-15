@@ -64,10 +64,24 @@ Es empfiehlt sich die einzelnen Punkte in der Navigation "Einstellungen" durchzu
 Das ist vor allem für jeden wichtig, der das Projektmanagement-Modul nutzt und dort für sein Projekt z.B. Backlinks eingetragen hat. Das Tool hat einen Backlinkchecker, der jeden Link alle X Tage prüft (ist der Backlink noch gesetzt?). Wer einen API Key hinterlegt hat, kann die Informationen "Suchvolumen", "CPC", "Konkurrenz" für angelegte Ideen sowie Keywords innerhalb von Projekten aktualisieren lassen. Des Weiteren erlaubt die API in regelmäßigen Abständen zum einen aktuelle Rankings sowie den Suchindex zu importieren. Das kann man zum einen automatisch via Cronjobs erreichen und zum anderen manuell (entsprechende Buttons findet man im Tool).
 
 Folgende Cronjobs sehen zur Verfügung und man muss nur zusehen, dass man sie regelmäßig abrufen lässt:
-- http://tool.deineseite.de/cronjob/backlinks - ich empfehle da z.B. nachts jede 5 Minuten das Script starten zu lassen, es prüft in den Standardeinstellungen 20 Backlinks pro Aufruf
-- http://tool.deineseite.de/cronjob/keywords - hier werden die Projektkeywords (SV,CPC,Competition) aktualisiert, ich empfehle das Script dafür ebenfalls z.B. alle 5 Minuten Nachts laufen zu lassen - Standardmäßig werden pro Aufruf 30 Keywords aktualisiert
-- http://tool.deineseite.de/cronjob/idea - hier wird das Hauptkeyword pro Idee (SV,CPC,Competition) aktualisiert, ich empfehle das Script dafür ebenfalls z.B. alle 5 Minuten Nachts laufen zu lassen - Standardmäßig werden pro Aufruf 30 Keywords aktualisiert
-- http://tool.deineseite.de/cronjob/rankings - der Cronjob aktualisiert für jedes Projekt die Rankings via API. Es werden die Top 100 Rankings nach Traffic importiert. Die Daten werden seitens api.metrics nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
-- http://tool.deineseite.de/cronjob/searchindex - der Cronjob aktualisiert für jedes Projekt den Suchindex (grafische Darstellung) via API. Die Daten werden seitens api.metrics nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
+- http:// tool.deineseite.de/cronjob/backlinks - ich empfehle da z.B. nachts jede 5 Minuten das Script starten zu lassen, es prüft in den Standardeinstellungen 20 Backlinks pro Aufruf
+- http:// tool.deineseite.de/cronjob/keywords - hier werden die Projektkeywords (SV,CPC,Competition) aktualisiert, ich empfehle das Script dafür ebenfalls z.B. alle 5 Minuten Nachts laufen zu lassen - Standardmäßig werden pro Aufruf 30 Keywords aktualisiert
+- http:// tool.deineseite.de/cronjob/idea - hier wird das Hauptkeyword pro Idee (SV,CPC,Competition) aktualisiert, ich empfehle das Script dafür ebenfalls z.B. alle 5 Minuten Nachts laufen zu lassen - Standardmäßig werden pro Aufruf 30 Keywords aktualisiert
+- http:// tool.deineseite.de/cronjob/rankings - der Cronjob aktualisiert für jedes Projekt die Rankings via API. Es werden die Top 100 Rankings nach Traffic importiert. Die Daten werden seitens api.metrics nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
+- http:// tool.deineseite.de/cronjob/searchindex - der Cronjob aktualisiert für jedes Projekt den Suchindex (grafische Darstellung) via API. Die Daten werden seitens api.metrics nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
 
-Interessant: Der **<a href="https://metrics.tools/x/hufe">Pro-Account von api.metrics</a>** hat 50.000 Credits. Die Aktualisierung eines Keywords (CPC, SV, Comp.) kostet 5 Credits. Import von 100 Rankings kostet 100 Credits und der Import des Suchindex kostet 10 Credits. D.h. selbst wer 1000 Ideen/Keywords hat, der wird kaum über 10.000 Credits kommen. Im Webtool wird dir außerdem ständig angezeigt, wie viele Credits zu noch hast!
+**Interessant:** Der **<a href="https://metrics.tools/x/hufe">Pro-Account von api.metrics</a>** hat 50.000 Credits. Die Aktualisierung eines Keywords (CPC, SV, Comp.) kostet 5 Credits. Import von 100 Rankings kostet 100 Credits und der Import des Suchindex kostet 10 Credits. D.h. selbst wer 1000 Ideen/Keywords hat, der wird kaum über 10.000 Credits kommen. Im Webtool wird dir außerdem ständig angezeigt, wie viele Credits zu noch hast!
+
+# Screenshots
+Der erste Eindruck zählt, daher findet man im Folgenden einige Screenshots des Tools, die Daten kommen von meinem Portal https://fernseher-kaufberatung.com.
+
+## Übersicht (Dashboard)
+<img src="http://storage6.static.itmages.com/i/16/0915/h_1473935109_2419591_adc4bd7eac.jpeg">
+
+<img src="">
+<img src="">
+<img src="">
+<img src="">
+<img src="">
+<img src="">
+
