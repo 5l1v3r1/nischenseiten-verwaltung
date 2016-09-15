@@ -4,6 +4,17 @@ Mit diesem Tool lassen sich Onlineprojekte (**Contentportale, Nischenseiten, ...
 
 Das Tool wurde auf Basis des PHP Frameworks <a href="https://github.com/laravel/laravel">Laravel 5.3</a> programmiert. Für den Backlinkchecker sowie für den Zugriff auf die <a href="https://metrics.tools/x/hufe">**API von metrics.tools**</a> wird des Weiteren <a href="https://github.com/guzzle/guzzle">Guzzle</a> verwendet.
 
+# Inhaltsverzeichnis
+- Zusammenfassung
+- Anforderungen
+- Installation
+- Logindaten
+- Einstellungen
+- Cronjobs
+- Rechteverwaltung
+- Screenshots
+- Onlinedemo
+
 # Anforderungen
 
 1. Webspace mit min. **PHP 5.6.4** (programmiert wurde auf Basis von PHP 7.1)
@@ -71,6 +82,11 @@ Folgende Cronjobs sehen zur Verfügung und man muss nur zusehen, dass man sie re
 - http:// tool.deineseite.de/cronjob/searchindex - der Cronjob aktualisiert für jedes Projekt den Suchindex (grafische Darstellung) via API. Die Daten werden seitens api.metrics nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
 
 **Interessant:** Der **<a href="https://metrics.tools/x/hufe">Pro-Account von api.metrics</a>** hat 50.000 Credits. Die Aktualisierung eines Keywords (CPC, SV, Comp.) kostet 5 Credits. Import von 100 Rankings kostet 100 Credits und der Import des Suchindex kostet 10 Credits. D.h. selbst wer 1000 Ideen/Keywords hat, der wird kaum über 10.000 Credits kommen. Im Webtool wird dir außerdem ständig angezeigt, wie viele Credits zu noch hast!
+
+# Rechteverwaltung
+Das Tool bietet eine simple Rechteverwaltung - es gibt zwei Gruppen - Administratoren und Mitglieder
+- Administrator: darf alles machen, sich einloggen als Mitglied, dessen Projekte und Ideen sehen und bearbeiten
+- Mitglied: darf eigene Projekte und Ideen anlegen, verwalten, ändern, sieht aber nichts von anderen Mitgliedern
 
 # Screenshots
 Der erste Eindruck zählt, daher findet man im Folgenden einige Screenshots des Tools, die Daten kommen von meinem Portal https://fernseher-kaufberatung.com. Das sind natürlich nicht alle Teile des Tools, die Screenshots sollen einen kleinen Einblick geben!
