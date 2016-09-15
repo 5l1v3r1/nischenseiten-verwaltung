@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    $('#backlink-table').on('click', '.refresh-link', function () {
+    $('#backlink-table').on('click', '.refresh-link', function (event) {
+        event.preventDefault();
+        
         var backlink_pk = $(this).data('pk');
         var current_button = $(this);
         var target = $('.backlink-' + backlink_pk + ' .update-backlink-target').text();
