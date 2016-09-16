@@ -32,7 +32,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'settings'], function ()
     Route::get('categories/index', 'IdeasCategoryController@showEntries');
     Route::get('partnerprograms/index', 'PartnerProgramController@showEntries');
     Route::get('projects/index', 'ProjectController@showEntries');
-    Route::get('apis/index', 'ApisController@showEntries');
     Route::get('users/index', 'UserController@showUserlist');
     Route::get('apis/index', 'OptionsController@updateOptions');
     Route::post('apis/index', 'OptionsController@postUpdateOptions');
