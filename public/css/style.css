@@ -18,6 +18,17 @@
 .delete-idea,.delete-category {
     color:#a94442
 }*/
+#idea-table .update-idea-cpc {
+  white-space: nowrap; }
+#idea-table .update-idea-ppp {
+  white-space: nowrap; }
+#idea-table .update-idea-bc {
+  white-space: nowrap; }
+#idea-table .update-idea-potential {
+  white-space: nowrap; }
+#idea-table .update-idea-provision {
+  white-space: nowrap; }
+
 #top-buttons {
   margin-bottom: 20px; }
 

@@ -47,7 +47,7 @@
                         <div class="col-md-8">
                             <input type="text" class="form-control" value ="{{$options->find(3)->value}}" name="backlink_count">
                         </div>
-
+                        <div class="clearfix"></div>
                         <label class="col-md-4 control-label">Intervall (in Tagen)</label>
                         <div class="col-md-8">
                             <input type="text" class="form-control" value="{{$options->find(6)->value}}" name="backlink_ttl">
@@ -73,7 +73,7 @@
                         <div class="col-md-8">
                             <input type="text" class="form-control" value="{{$options->find(4)->value}}" name="keyword_count">
                         </div>
-
+                        <div class="clearfix"></div>
                         <label class="col-md-4 control-label">Intervall (in Tagen)</label>
                         <div class="col-md-8">
                             <input type="text" class="form-control"value="{{$options->find(7)->value}}"  name="keyword_ttl">
@@ -99,7 +99,7 @@
                         <div class="col-md-8">
                             <input type="text" class="form-control" value="{{$options->find(5)->value}}" name="idea_count">
                         </div>
-
+                        <div class="clearfix"></div>
                         <label class="col-md-4 control-label">Intervall (in Tagen)</label>
                         <div class="col-md-8">
                             <input type="text" class="form-control" value="{{$options->find(8)->value}}" name="idea_ttl">
