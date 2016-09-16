@@ -60,7 +60,7 @@ class UserController extends Controller
     {
         $request->session()->forget('project');
         Auth::login($user, true);
-        
+
         return redirect()->action('DashboardController@index');
     }
 

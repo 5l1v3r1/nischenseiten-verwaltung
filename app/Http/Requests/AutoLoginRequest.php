@@ -15,7 +15,7 @@ class AutoLoginRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->can('make_auto_login', User::class);
+        return $this->user()->can('make_auto_login', request()->route('user'));
     }
 
     /**

@@ -41,7 +41,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'user'], function ()
 {
     Route::get('profile', 'UserController@updateProfile');
     Route::post('profile', 'UserController@postUpdateProfile');
-    Route::get('autologin/{user}', 'UserController@loginWithID');
+    Route::get('autologin/{user}', 'UserController@loginWithID')->where('user', '^[1-9][0-9]*$');
 });
 
 Route::group(['middleware' => 'auth', 'prefix' => 'project'], function ()

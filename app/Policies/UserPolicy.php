@@ -18,6 +18,12 @@ class UserPolicy
      */
     public function make_auto_login(User $user)
     {
+
+        if ($user === null)
+        {
+            return false;
+        }
+
         if ($user->role->level > 90)
         {
             return true;
