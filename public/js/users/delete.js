@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#user-table').on('click', '.delete-user', function () {
+    $('#user-table').on('click', '.delete-user', function (event) {
+        event.preventDefault();
         var user_pk = $(this).data('pk');
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");
 

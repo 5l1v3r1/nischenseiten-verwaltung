@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#idea-table').on('click', '.delete-idea', function () {
+    $('#idea-table').on('click', '.delete-idea', function (event) {
+        event.preventDefault();
         var idea_pk = $(this).data('pk');
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");
 

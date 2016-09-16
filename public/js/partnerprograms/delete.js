@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#partnerprogram-table').on('click', '.delete-partnerprogram', function () {
+    $('#partnerprogram-table').on('click', '.delete-partnerprogram', function (event) {
+        event.preventDefault();
         var partnerprogram_pk = $(this).data('pk');
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");
 

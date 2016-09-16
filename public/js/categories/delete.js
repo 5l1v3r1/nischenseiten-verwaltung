@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#category-table').on('click', '.delete-category', function () {
+    $('#category-table').on('click', '.delete-category', function (event) {
+        event.preventDefault();
         var category_pk = $(this).data('pk');
         var really_delete = confirm("Soll der Eintrag wirklich gelöscht werden?");
 

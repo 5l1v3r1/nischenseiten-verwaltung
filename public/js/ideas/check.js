@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#idea-table').on('click', '.refresh-ideakeyword', function () {
+    $('#idea-table').on('click', '.refresh-ideakeyword', function (event) {
+        event.preventDefault();
         var idea_pk = $(this).data('pk');
         var current_button = $(this);
 
