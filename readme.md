@@ -24,7 +24,7 @@ Das Tool wurde auf Basis des PHP Frameworks <a href="https://github.com/laravel/
 
 1. Webspace mit min. **PHP 5.6.4** (PHP 7.1 wird empfohlen)
 2. Eine **MySQL** Datenbank
-3. (optional) wer die Funktionen, wie auto. oder manuelle Keyword-Aktualisierung, Rankingimport, Searchindex nutzen will, braucht einen **<a href="https://metrics.tools/x/hufe">Pro-Account von api.metrics</a>**. 
+3. (optional) wer die Funktionen, wie auto. oder manuelle Keyword-Aktualisierung, Rankingimport, Searchindex nutzen will, braucht einen **<a href="https://metrics.tools/x/hufe">Pro-Account von metrics.tools</a>**. 
 4. (optional) Möglichkeit **Cronjobs** auszuführen
 
 
@@ -82,10 +82,10 @@ Folgende Cronjobs sehen zur Verfügung und man muss nur zusehen, dass man sie re
 - **tool.deineseite.de/cronjob/backlinks** - ich empfehle da z.B. nachts jede 5 Minuten das Script starten zu lassen, es prüft in den Standardeinstellungen 20 Backlinks pro Aufruf
 - **tool.deineseite.de/cronjob/keywords** - hier werden die Projektkeywords (SV,CPC,Competition) aktualisiert, ich empfehle das Script dafür ebenfalls z.B. alle 5 Minuten Nachts laufen zu lassen - Standardmäßig werden pro Aufruf 30 Keywords aktualisiert
 - **tool.deineseite.de/cronjob/ideas** - hier wird das Hauptkeyword pro Idee (SV,CPC,Competition) aktualisiert, ich empfehle das Script dafür ebenfalls z.B. alle 5 Minuten Nachts laufen zu lassen - Standardmäßig werden pro Aufruf 30 Keywords aktualisiert
-- **tool.deineseite.de/cronjob/rankings** - der Cronjob aktualisiert für jedes Projekt die Rankings via API. Es werden die Top 100 Rankings nach Traffic importiert. Die Daten werden seitens api.metrics nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
-- **tool.deineseite.de/cronjob/searchindex** - der Cronjob aktualisiert für jedes Projekt den Suchindex (grafische Darstellung) via API. Die Daten werden seitens api.metrics nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
+- **tool.deineseite.de/cronjob/rankings** - der Cronjob aktualisiert für jedes Projekt die Rankings via API. Es werden die Top 100 Rankings nach Traffic importiert. Die Daten werden seitens metrics.tools nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
+- **tool.deineseite.de/cronjob/searchindex** - der Cronjob aktualisiert für jedes Projekt den Suchindex (grafische Darstellung) via API. Die Daten werden seitens metrics.tools nur 1x pro Woche aktualisiert, d.h. ich empfehle hier das Script ein Mal pro Woche z.B. am Sonntag abend laufen zu lassen
 
-**Interessant:** Der **<a href="https://metrics.tools/x/hufe">Pro-Account von api.metrics</a>** hat 50.000 Credits. Die Aktualisierung eines Keywords (CPC, SV, Comp.) kostet 5 Credits. Import von 100 Rankings kostet 100 Credits und der Import des Suchindex kostet 10 Credits. D.h. selbst wer 1000 Ideen/Keywords hat, der wird kaum über 10.000 Credits kommen. Im Webtool wird dir außerdem ständig angezeigt, wie viele Credits zu noch hast!
+**Interessant:** Der **<a href="https://metrics.tools/x/hufe">Pro-Account von metrics.tools</a>** hat 50.000 Credits. Die Aktualisierung eines Keywords (CPC, SV, Comp.) kostet 5 Credits. Import von 100 Rankings kostet 100 Credits und der Import des Suchindex kostet 10 Credits. D.h. selbst wer 1000 Ideen/Keywords hat, der wird kaum über 10.000 Credits kommen. Im Webtool wird dir außerdem ständig angezeigt, wie viele Credits zu noch hast!
 
 # Rechteverwaltung
 Das Tool bietet eine simple Rechteverwaltung - es gibt zwei Gruppen - Administratoren und Mitglieder
@@ -144,5 +144,5 @@ Hi, ich bin Damian, ich programmiere liebend gern in PHP. Mehr zu mir findest du
 
 # So kannst du dich bei mir bedanken
 Falls dir das Tool gefällt und du es geil findest, dass sich da jemand Tage hinsetzt, was programmiert und es allen kostenlos zur Verfügung steht, kannst du dich gerne bei mir bedanken. Über eine E-Mail freue ich mich immer :) Alternativ kannst du auch folgendes machen:
-<br />1. wenn du die Ranking/Keyword-Funktionen nutzen willst, brauchst du einen Key von api.metrics - bestellst du einen Account, bekomme ich 20%: https://metrics.tools/x/hufe<br />
+<br />1. wenn du die Ranking/Keyword-Funktionen nutzen willst, brauchst du einen Key von metrics.tools - bestellst du einen Account, bekomme ich 20%: https://metrics.tools/x/hufe<br />
 2. jeder braucht Webspace für seine Seiten - all-inkl.com ist da immer eine Empfehlung - bekommst du hier: https://all-inkl.com/?partner=507458 (und ich einige Euro aufs Konto)

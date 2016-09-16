@@ -16,7 +16,7 @@ class OptionTableSeeder extends Seeder
         DB::table('options')->insert([
             'id'         => '1',
             'name'       => 'apimetrics_api',
-            'full_name'  => 'API Key (api.metrics)',
+            'full_name'  => 'API Key (metrics.tools)',
             'value'      => '',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
