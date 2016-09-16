@@ -11,15 +11,9 @@
   |
  */
 
-Route::get('/', function ()
-{
-    return redirect()->route('login');
-});
+Route::get('/', 'HomeController@redirectToDashboard');
 
-Route::get('/home', function()
-{
-    return redirect()->action('DashboardController@index');
-});
+Route::get('/home', 'HomeController@redirectToDashboard');
 
 Auth::routes();
 
