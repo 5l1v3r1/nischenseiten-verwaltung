@@ -7,14 +7,14 @@
 
     @include('project.sidebar')
 
-    <div class="col-xs-10">
+    <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
 
         <div id="top-buttons" class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-5 col-xs-6">
                 <button id="add-projectnote" class="btn btn-success pull-left"><i class="fa fa-plus"></i> Neu</button>
             </div>
             
-            <div class="col-lg-3 pull-right">
+            <div class="col-lg-3 col-md-4 col-xs-6 pull-right">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     <input id="table-searchfilter" type="text" class="form-control" placeholder="Tabelle durchsuchen...">
@@ -22,7 +22,7 @@
 
             </div>
             
-            <div class="col-lg-3 pull-right">
+            <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
                 @if(Session::get('project.notes.archived')==0)
                 <a href="/project/notes/showarchived" class="btn btn-primary pull-right"><i class="fa fa-archive"></i> Archivierte anzeigen</a>
                 @else

@@ -7,14 +7,14 @@
 
     @include('project.sidebar')
 
-    <div class="col-xs-10">
+    <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
 
         <div id="top-buttons" class="row">
-            <div class="col-lg-2">
+            <div class="col-xs-12 col-sm-4 col-md-2">
                 <button id="update-ranking" class="btn btn-success pull-left"><i class="fa fa-refresh"></i> Ranking aktualisieren</button>
             </div>
             @if(count($keywords)>0)
-            <div class="col-lg-10">
+            <div class="col-xs-12 col-sm-8 col-md-10 hidden-sm hidden-xs">
                 <div class="well">Die Daten werden über die API von <a target="_blank" href="https://metrics.tools/x/hufe">metrics.tools</a> aktualisiert. Jedes aktualisierte Keyword kostet <em>1 Credit</em>, aktuell hast du noch <strong>{{$option->credits}}</strong> Credits. Die Sortierung erfolgt nach Traffic (absteigend), d.h. die Keywords ganz oben sind für dieses Projekt am relevantesten. Im Allgemeinen sollte man die Liste 1x pro Woche aktualisieren.</div>
             </div>
             @endif

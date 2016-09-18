@@ -6,10 +6,10 @@
 
     @include('project.sidebar')
 
-    <div id="project-contentwrapper" class="col-xs-10">
+    <div id="project-contentwrapper" class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
         <div class="row">
             <!-- -->
-            <div class="col-xs-3">
+            <div class="col-xs-6 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3">
+            <div class="col-xs-6 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3">
+            <div class="col-xs-6 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3">
+            <div class="col-xs-6 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">

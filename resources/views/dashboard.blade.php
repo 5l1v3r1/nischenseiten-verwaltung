@@ -3,7 +3,7 @@
 @section('content')
 
 <div id="dashboard" class="row">
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="panel panel-success">
             <div class="panel-heading">
                 <div class="row">
@@ -27,7 +27,7 @@
             </a>
         </div>
     </div>
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="panel panel-success">
             <div class="panel-heading">
                 <div class="row">
@@ -52,7 +52,7 @@
         </div>
     </div>
     @if(Auth::user()->role->level > 90)
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <div class="row">
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <div class="row">

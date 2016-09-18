@@ -6,10 +6,10 @@
 
 
 <div class="row">
-    <div class="col-lg-1">
+    <div class="col-lg-1 col-md-12 visible-lg">
         <button id="add-idea" class="btn btn-success pull-left"><i class="fa fa-plus"></i> Neu</button>
     </div>  
-    <div class="col-lg-11">
+    <div class="col-lg-11 col-md-12">
         <div id="idea-search" class="row">
             <form action="/ideas/index" method="POST">
                 {{ csrf_field() }}
