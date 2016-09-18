@@ -13,8 +13,15 @@
             <div class="col-lg-6">
                 <button id="add-projectcontent" class="btn btn-success pull-left"><i class="fa fa-plus"></i> Neu</button>
             </div>
+            
+            <div class="col-lg-3 pull-right">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input id="table-searchfilter" type="text" class="form-control" placeholder="Tabelle durchsuchen...">
+                </div>
+            </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-3 pull-right">
                 @if(Session::get('project.content.archived')==0)
                 <a href="/project/content/showarchived" class="btn btn-primary pull-right"><i class="fa fa-archive"></i> Archivierte anzeigen</a>
                 @else
@@ -31,7 +38,7 @@
         <div id="projectcontent-panel" class="panel panel-default">
 
             <div class="table-responsive">
-                <table id="projectcontent-table" class="table table-striped table-hover tablesorter">
+                <table id="projectcontent-table" class="table table-striped table-hover tablesorter tablesearch">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -72,6 +79,7 @@
 @section('js.files')
 <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 <script src="/js/plugins/tablesorter.min.js"></script> 
+<script src="/js/plugins/tablefilter.min.js"></script> 
 <script src="/js/project/content.add.js"></script>
 <script src="/js/project/content.editables.js"></script>
 <script src="/js/project/content.delete.js"></script>

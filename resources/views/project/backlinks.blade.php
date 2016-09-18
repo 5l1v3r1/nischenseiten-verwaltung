@@ -10,8 +10,15 @@
     <div class="col-xs-10">
 
         <div id="top-buttons" class="row">           
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <button id="add-backlink" class="btn btn-success"><i class="fa fa-plus"></i> Neu</button>
+            </div>
+            
+            <div class="col-lg-3 pull-right">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input id="table-searchfilter" type="text" class="form-control" placeholder="Tabelle durchsuchen...">
+                </div>
             </div>
         </div>
 
@@ -22,7 +29,7 @@
         <div id="backlink-panel" class="panel panel-default">
 
             <div class="table-responsive">
-                <table id="backlink-table" class="table table-striped table-hover tablesorter">
+                <table id="backlink-table" class="table table-striped table-hover tablesorter tablesearch">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -65,6 +72,7 @@
 
 @section('js.files')
 <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="/js/plugins/tablefilter.min.js"></script> 
 <script src="/js/plugins/tablesorter.min.js"></script> 
 <script src="/js/project/backlink.add.js"></script>
 <script src="/js/project/backlink.editables.js"></script>

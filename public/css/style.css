@@ -21,6 +21,13 @@
 th.header {
   cursor: pointer; }
 
+.tablesearch tr[visible='false'],
+.no-result {
+  display: none; }
+
+.tablesearch tr[visible='true'] {
+  display: table-row; }
+
 .headerSortUp:after, .sorting_desc:after {
   content: '\f163';
   font-family: FontAwesome;
