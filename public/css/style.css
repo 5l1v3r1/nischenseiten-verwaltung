@@ -21,7 +21,7 @@
 th.header {
   cursor: pointer; }
 
-.headerSortUp:after {
+.headerSortUp:after, .sorting_desc:after {
   content: '\f163';
   font-family: FontAwesome;
   font-style: normal;
@@ -31,7 +31,7 @@ th.header {
   font-size: 13px;
   padding-left: 0.5em; }
 
-.headerSortDown:after {
+.headerSortDown:after, .sorting_asc:after {
   content: '\f162';
   font-family: FontAwesome;
   font-style: normal;
