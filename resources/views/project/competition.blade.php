@@ -21,7 +21,7 @@
         <div id="projectcompetition-panel" class="panel panel-default">
 
             <div class="table-responsive">
-                <table id="projectcompetition-table" class="table table-striped table-hover">
+                <table id="projectcompetition-table" class="table table-striped table-hover tablesorter">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -59,6 +59,7 @@
 
 @section('js.files')
 <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="/js/plugins/tablesorter.min.js"></script> 
 <script src="/js/project/competition.add.js"></script>
 <script src="/js/project/competition.editables.js"></script>
 <script src="/js/project/competition.delete.js"></script>
@@ -69,7 +70,32 @@
 @endsection
 
 @section('js.inline.code') 
+<script>
+    $(document).ready(function () {
+        $("#projectcompetition-table").tablesorter({
+            sortList: [[0, 1]],
+            headers: {
+                1: {
+                    sorter: false
+                },
+                3: {
+                    sorter: false
+                },
+                4: {
+                    sorter: false
+                }
+            },
+            textExtraction: function (node) {
 
+                if ($(node).hasClass('star-rated-value')) {
+                    return $(node).find('a').data('value');
+                } else {
+                    return node.innerHTML;
+                }
+            }
+        });
+    });
+</script>
 @endsection
 
 @section('page.title')

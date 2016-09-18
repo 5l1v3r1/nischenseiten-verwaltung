@@ -7,7 +7,7 @@
         <a class="update-projectcompetition-url" data-pk="{{$competition->id}}" href="#">{{$competition->url}}</a>
     </td>
 
-    <td>
+    <td class="star-rated-value">
         <a class="update-projectcompetition-power" data-value="{{$competition->power}}" data-pk="{{$competition->id}}" href="#">{{$competition->power}}</a>
     </td>
 

@@ -18,6 +18,29 @@
 .delete-idea,.delete-category {
     color:#a94442
 }*/
+th.header {
+  cursor: pointer; }
+
+.headerSortUp:after {
+  content: '\f163';
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #666;
+  font-size: 13px;
+  padding-left: 0.5em; }
+
+.headerSortDown:after {
+  content: '\f162';
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #666;
+  font-size: 13px;
+  padding-left: 0.5em; }
+
 #idea-table .update-idea-cpc {
   white-space: nowrap; }
 #idea-table .update-idea-ppp {

@@ -22,7 +22,7 @@
         <div id="projectkeyword-panel" class="panel panel-default">
 
             <div class="table-responsive">
-                <table id="projectkeyword-table" class="table table-striped table-hover">
+                <table id="projectkeyword-table" class="table table-striped table-hover tablesorter">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -66,6 +66,7 @@
 
 @section('js.files')
 <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="/js/plugins/tablesorter.min.js"></script> 
 <script src="/js/project/keyword.add.js"></script>
 <script src="/js/project/keyword.editables.js"></script>
 <script src="/js/project/keyword.delete.js"></script>
@@ -80,7 +81,24 @@
 @endsection
 
 @section('js.inline.code') 
-
+<script>
+    $(document).ready(function () {
+        $("#projectkeyword-table").tablesorter({
+            sortList: [[0, 1]],
+            headers: {
+                6: {
+                    sorter: false
+                },
+                7: {
+                    sorter: false
+                },
+                8: {
+                    sorter: false
+                }
+            }
+        });
+    });
+</script>
 @endsection
 
 @section('page.title')

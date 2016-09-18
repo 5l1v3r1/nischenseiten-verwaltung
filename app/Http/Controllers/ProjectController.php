@@ -60,10 +60,10 @@ class ProjectController extends Controller
         switch ($request->session()->get('project.notes.archived'))
         {
             case 1:
-                $notes = Note::withTrashed()->where('project_id', $project_id)->get();
+                $notes = Note::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
                 break;
             default:
-                $notes = Note::all()->where('project_id', $project_id);
+                $notes = Note::all()->where('project_id', $project_id)->sortByDesc("id");
         }
 
 
@@ -80,10 +80,10 @@ class ProjectController extends Controller
         switch ($request->session()->get('project.content.archived'))
         {
             case 1:
-                $content = Content::withTrashed()->where('project_id', $project_id)->get();
+                $content = Content::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
                 break;
             default:
-                $content = Content::all()->where('project_id', $project_id);
+                $content = Content::all()->where('project_id', $project_id)->sortByDesc("id");
         }
 
         return view('project.content', [
@@ -99,10 +99,10 @@ class ProjectController extends Controller
         switch ($request->session()->get('project.competition.archived'))
         {
             case 1:
-                $competition = Competition::withTrashed()->where('project_id', $project_id)->get();
+                $competition = Competition::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
                 break;
             default:
-                $competition = Competition::all()->where('project_id', $project_id);
+                $competition = Competition::all()->where('project_id', $project_id)->sortByDesc("id");
         }
 
         return view('project.competition', [
@@ -118,10 +118,10 @@ class ProjectController extends Controller
         switch ($request->session()->get('project.keywords.archived'))
         {
             case 1:
-                $keywords = Keyword::withTrashed()->where('project_id', $project_id)->get();
+                $keywords = Keyword::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
                 break;
             default:
-                $keywords = Keyword::all()->where('project_id', $project_id);
+                $keywords = Keyword::all()->where('project_id', $project_id)->sortByDesc("id");
         }
 
         return view('project.keywords', [
@@ -134,7 +134,7 @@ class ProjectController extends Controller
 
         $project_id = $request->session()->get('project.id');
 
-        $backlinks = Backlink::all()->where('project_id', $project_id);
+        $backlinks = Backlink::all()->where('project_id', $project_id)->sortByDesc("id");
 
 
         return view('project.backlinks', [

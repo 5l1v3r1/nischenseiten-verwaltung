@@ -11,7 +11,7 @@
         <a class="update-projectnote-content" data-pk="{{$note->id}}" href="#">{{$note->note}}</a>
     </td>
 
-    <td>
+    <td class="star-rated-value">
         <a class="update-projectnote-priority" data-value="{{$note->priority}}" data-pk="{{$note->id}}" href="#">{{$note->priority}}</a>
     </td>
 

@@ -135,7 +135,7 @@
 @endsection
 
 @section('js.files')
-<script src="/js/Chart.bundle.min.js"></script>
+<script src="/js/plugins/Chart.bundle.min.js"></script>
 <script src="/js/project/project.si.check.js"></script>
 @endsection
 
