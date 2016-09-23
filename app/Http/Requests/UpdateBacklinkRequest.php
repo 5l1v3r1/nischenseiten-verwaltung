@@ -25,7 +25,7 @@ class UpdateBacklinkRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+
         ];
     }
 }

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Keyword extends Model
 {
-
     /**
      * Get the project of this keyword.
      */
@@ -14,5 +13,4 @@ class Keyword extends Model
     {
         return $this->hasOne('App\Project', 'id', 'project_id');
     }
-
 }

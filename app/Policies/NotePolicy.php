@@ -8,14 +8,14 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 
 class NotePolicy
 {
-
     use HandlesAuthorization;
 
     /**
      * Determine whether the user can view the note.
      *
-     * @param  App\User  $user
-     * @param  App\Note  $note
+     * @param App\User $user
+     * @param App\Note $note
+     *
      * @return mixed
      */
     public function view(User $user, Note $note)
@@ -26,53 +26,52 @@ class NotePolicy
     /**
      * Determine whether the user can create notes.
      *
-     * @param  App\User  $user
+     * @param App\User $user
+     *
      * @return mixed
      */
     public function create(User $user)
     {
-
         return true;
     }
 
     /**
      * Determine whether the user can update the note.
      *
-     * @param  App\User  $user
-     * @param  App\Note  $note
+     * @param App\User $user
+     * @param App\Note $note
+     *
      * @return mixed
      */
     public function update(User $user, Note $note)
     {
-        if ($user->role->level > 90)
-        {
+        if ($user->role->level > 90) {
             return true;
         }
-        if ($user->id === $note->project->user_id)
-        {
+        if ($user->id === $note->project->user_id) {
             return true;
         }
+
         return false;
     }
 
     /**
      * Determine whether the user can delete the note.
      *
-     * @param  App\User  $user
-     * @param  App\Note  $note
+     * @param App\User $user
+     * @param App\Note $note
+     *
      * @return mixed
      */
     public function delete(User $user, Note $note)
     {
-        if ($user->role->level > 90)
-        {
+        if ($user->role->level > 90) {
             return true;
         }
-        if ($user->id === $note->project->user_id)
-        {
+        if ($user->id === $note->project->user_id) {
             return true;
         }
+
         return false;
     }
-
 }

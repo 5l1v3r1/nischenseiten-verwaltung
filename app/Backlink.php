@@ -1,12 +1,11 @@
 <?php
 
-namespace App;
+namespace app;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Backlink extends Model
 {
-
     /**
      * Get the project of this backlink entry.
      */
@@ -14,5 +13,4 @@ class Backlink extends Model
     {
         return $this->hasOne('App\Project', 'id', 'project_id');
     }
-
 }

@@ -24,7 +24,7 @@ class ViewOptionsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+
         ];
     }
 }

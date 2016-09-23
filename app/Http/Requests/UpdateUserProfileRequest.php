@@ -4,12 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\User;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 
 class UpdateUserProfileRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -28,10 +26,9 @@ class UpdateUserProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'     => 'required',
-            'email'    => 'required|confirmed|email|unique:users,email,' . $this->user()->id,
-            'password' => 'confirmed'
+            'name' => 'required',
+            'email' => 'required|confirmed|email|unique:users,email,'.$this->user()->id,
+            'password' => 'confirmed',
         ];
     }
-
 }

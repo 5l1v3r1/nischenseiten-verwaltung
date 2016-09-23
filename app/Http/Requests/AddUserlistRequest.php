@@ -7,7 +7,6 @@ use App\User;
 
 class AddUserlistRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -26,10 +25,9 @@ class AddUserlistRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'     => 'required',
-            'email'    => 'required|email|unique:users,email,' . $this->user()->id,
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,'.$this->user()->id,
             'password' => 'confirmed',
         ];
     }
-
 }

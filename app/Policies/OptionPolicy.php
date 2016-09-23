@@ -2,7 +2,6 @@
 
 namespace App\Policies;
 
-use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class OptionPolicy
@@ -11,11 +10,8 @@ class OptionPolicy
 
     /**
      * Create a new policy instance.
-     *
-     * @return void
      */
     public function __construct()
     {
-        //
     }
 }

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class IdeaCategory extends Model
 {
-
     /**
      * Get the amount of ideas this categorie has.
      */
@@ -22,5 +21,4 @@ class IdeaCategory extends Model
     {
         return $this->hasOne('App\User', 'id', 'user_id');
     }
-
 }

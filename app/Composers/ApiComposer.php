@@ -1,25 +1,23 @@
 <?php
 
-namespace App\Composers;
+namespace app\Composers;
 
 use Illuminate\View\View;
 use App\Option;
 
 class ApiComposer
 {
-
     /**
-     * The user repository implementation.
+     * The optiontable repository implementation.
      *
-     * @var Projects
+     * @var Option
      */
     protected $option;
 
     /**
      * Create a new profile composer.
      *
-     * @param  Project $projects
-     * @return void
+     * @param Option $option
      */
     public function __construct(Option $option)
     {
@@ -28,15 +26,13 @@ class ApiComposer
     }
 
     /**
-     * Bind data to the view.
+     * Bind data with ID 1 (apimetrics key) to the view.
      *
-     * @param  View  $view
-     * @return void
+     * @param View $view
      */
     public function compose(View $view)
     {
         $api = $this->option->find(1);
         $view->with('api', $api);
     }
-
 }

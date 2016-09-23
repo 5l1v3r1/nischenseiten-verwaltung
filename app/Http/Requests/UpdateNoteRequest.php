@@ -7,7 +7,6 @@ use App\Note;
 
 class UpdateNoteRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -26,8 +25,7 @@ class UpdateNoteRequest extends FormRequest
     public function rules()
     {
         return [
-                //
+
         ];
     }
-
 }

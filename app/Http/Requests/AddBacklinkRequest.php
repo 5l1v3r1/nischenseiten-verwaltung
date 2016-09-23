@@ -25,7 +25,7 @@ class AddBacklinkRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+
         ];
     }
 }

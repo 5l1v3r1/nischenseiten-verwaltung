@@ -29,8 +29,6 @@ use AuthenticatesUsers;
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -41,5 +39,4 @@ use AuthenticatesUsers;
     {
         return trans('auth.failed');
     }
-
 }

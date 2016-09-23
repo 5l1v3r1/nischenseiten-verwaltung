@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Note extends Model
 {
-
     use SoftDeletes;
 
     /**
@@ -24,5 +23,4 @@ class Note extends Model
     {
         return $this->hasOne('App\Project', 'id', 'project_id');
     }
-
 }

@@ -13,8 +13,9 @@ class BacklinkPolicy
     /**
      * Determine whether the user can view the backlink.
      *
-     * @param  App\User  $user
-     * @param  App\Backlink  $backlink
+     * @param App\User     $user
+     * @param App\Backlink $backlink
+     *
      * @return mixed
      */
     public function view(User $user, Backlink $backlink)
@@ -25,7 +26,8 @@ class BacklinkPolicy
     /**
      * Determine whether the user can create backlinks.
      *
-     * @param  App\User  $user
+     * @param App\User $user
+     *
      * @return mixed
      */
     public function create(User $user)
@@ -36,19 +38,18 @@ class BacklinkPolicy
     /**
      * Determine whether the user can update the backlink.
      *
-     * @param  App\User  $user
-     * @param  App\Backlink  $backlink
+     * @param App\User     $user
+     * @param App\Backlink $backlink
+     *
      * @return mixed
      */
     public function update(User $user, Backlink $backlink)
     {
-        if ($user->role->level > 90)
-        {
+        if ($user->role->level > 90) {
             return true;
         }
 
-        if ($user->id === $backlink->project->user_id)
-        {
+        if ($user->id === $backlink->project->user_id) {
             return true;
         }
 
@@ -58,19 +59,18 @@ class BacklinkPolicy
     /**
      * Determine whether the user can delete the backlink.
      *
-     * @param  App\User  $user
-     * @param  App\Backlink  $backlink
+     * @param App\User     $user
+     * @param App\Backlink $backlink
+     *
      * @return mixed
      */
     public function delete(User $user, Backlink $backlink)
     {
-        if ($user->role->level > 90)
-        {
+        if ($user->role->level > 90) {
             return true;
         }
 
-        if ($user->id === $backlink->project->user_id)
-        {
+        if ($user->id === $backlink->project->user_id) {
             return true;
         }
 

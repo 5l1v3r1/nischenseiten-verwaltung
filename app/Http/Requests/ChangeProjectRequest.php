@@ -6,7 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ChangeProjectRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -14,7 +13,6 @@ class ChangeProjectRequest extends FormRequest
      */
     public function authorize()
     {
-
         return $this->user()->can('change_project', request()->route('project'));
     }
 
@@ -26,8 +24,7 @@ class ChangeProjectRequest extends FormRequest
     public function rules()
     {
         return [
-                //
+
         ];
     }
-
 }

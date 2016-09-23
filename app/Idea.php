@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Idea extends Model
 {
-
     /**
      * Get the category that was assigned to this idea.
      */
@@ -30,5 +29,4 @@ class Idea extends Model
     {
         return $this->hasOne('App\User', 'id', 'user_id');
     }
-
 }

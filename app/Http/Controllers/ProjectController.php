@@ -17,20 +17,16 @@ use Illuminate\Support\Facades\Cache;
 
 class ProjectController extends Controller
 {
-
     public function showEntries(ViewProjectlistRequest $request, Project $project)
     {
-        if (Auth::user()->role->level > 90)
-        {
+        if (Auth::user()->role->level > 90) {
             $projects = Project::all();
-        }
-        else
-        {
+        } else {
             $projects = Project::where('user_id', Auth::user()->id)->get();
         }
 
         return view('projects.index', [
-            'projects' => $projects
+            'projects' => $projects,
         ]);
     }
 
@@ -39,17 +35,17 @@ class ProjectController extends Controller
         $project_id = $request->session()->get('project.id');
 
         $cache_name = md5(
-                $request->session()->get('project.id') . '-si-' . $request->session()->get('project.name')
+                $request->session()->get('project.id').'-si-'.$request->session()->get('project.name')
         );
 
-        $si         = json_decode(Cache::get($cache_name), true);
+        $si = json_decode(Cache::get($cache_name), true);
 
         return view('project.dashboard', [
-            'notes'        => Note::all()->where('project_id', $project_id)->count(),
+            'notes' => Note::all()->where('project_id', $project_id)->count(),
             'contentideas' => Content::all()->where('project_id', $project_id)->count(),
-            'competitors'  => Competition::all()->where('project_id', $project_id)->count(),
-            'keywords'     => Keyword::all()->where('project_id', $project_id)->count(),
-            'metrics_si'   => $si
+            'competitors' => Competition::all()->where('project_id', $project_id)->count(),
+            'keywords' => Keyword::all()->where('project_id', $project_id)->count(),
+            'metrics_si' => $si,
         ]);
     }
 
@@ -57,71 +53,63 @@ class ProjectController extends Controller
     {
         $project_id = $request->session()->get('project.id');
 
-        switch ($request->session()->get('project.notes.archived'))
-        {
+        switch ($request->session()->get('project.notes.archived')) {
             case 1:
-                $notes = Note::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
+                $notes = Note::withTrashed()->where('project_id', $project_id)->sortByDesc('id')->get();
                 break;
             default:
-                $notes = Note::all()->where('project_id', $project_id)->sortByDesc("id");
+                $notes = Note::all()->where('project_id', $project_id)->sortByDesc('id');
         }
 
-
         return view('project.notes', [
-            'notes' => $notes
+            'notes' => $notes,
         ]);
     }
 
     public function content(ViewProjectRequest $request, Project $project)
     {
-
         $project_id = $request->session()->get('project.id');
 
-        switch ($request->session()->get('project.content.archived'))
-        {
+        switch ($request->session()->get('project.content.archived')) {
             case 1:
-                $content = Content::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
+                $content = Content::withTrashed()->where('project_id', $project_id)->sortByDesc('id')->get();
                 break;
             default:
-                $content = Content::all()->where('project_id', $project_id)->sortByDesc("id");
+                $content = Content::all()->where('project_id', $project_id)->sortByDesc('id');
         }
 
         return view('project.content', [
-            'content' => $content
+            'content' => $content,
         ]);
     }
 
     public function competition(ViewProjectRequest $request, Project $project)
     {
-
         $project_id = $request->session()->get('project.id');
 
-        switch ($request->session()->get('project.competition.archived'))
-        {
+        switch ($request->session()->get('project.competition.archived')) {
             case 1:
-                $competition = Competition::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
+                $competition = Competition::withTrashed()->where('project_id', $project_id)->sortByDesc('id')->get();
                 break;
             default:
-                $competition = Competition::all()->where('project_id', $project_id)->sortByDesc("id");
+                $competition = Competition::all()->where('project_id', $project_id)->sortByDesc('id');
         }
 
         return view('project.competition', [
-            'competition' => $competition
+            'competition' => $competition,
         ]);
     }
 
     public function keywords(ViewProjectRequest $request, Project $project)
     {
-
         $project_id = $request->session()->get('project.id');
 
-        switch ($request->session()->get('project.keywords.archived'))
-        {
+        switch ($request->session()->get('project.keywords.archived')) {
             case 1:
-                $keywords = Keyword::withTrashed()->where('project_id', $project_id)->sortByDesc("id")->get();
+                $keywords = Keyword::withTrashed()->where('project_id', $project_id)->sortByDesc('id')->get();
                 break;
             default:
-                $keywords = Keyword::all()->where('project_id', $project_id)->sortByDesc("id");
+                $keywords = Keyword::all()->where('project_id', $project_id)->sortByDesc('id');
         }
 
         return view('project.keywords', [
@@ -131,11 +119,9 @@ class ProjectController extends Controller
 
     public function backlinks(ViewProjectRequest $request, Project $project)
     {
-
         $project_id = $request->session()->get('project.id');
 
-        $backlinks = Backlink::all()->where('project_id', $project_id)->sortByDesc("id");
-
+        $backlinks = Backlink::all()->where('project_id', $project_id)->sortByDesc('id');
 
         return view('project.backlinks', [
             'backlinks' => $backlinks,
@@ -144,24 +130,21 @@ class ProjectController extends Controller
 
     public function rankings(ViewProjectRequest $request, Project $project)
     {
-
         $cache_name = md5(
-                $request->session()->get('project.id') . '-ranking-' . $request->session()->get('project.name')
+                $request->session()->get('project.id').'-ranking-'.$request->session()->get('project.name')
         );
 
         $keywords = json_decode(Cache::get($cache_name), true);
 
-        if (isset($keywords['values']))
-        {
+        if (isset($keywords['values'])) {
             $keywords = $keywords['values'];
-        }
-        else
-        {
+        } else {
             $keywords = [];
         }
+
         return view('project.ranking', [
             'keywords' => $keywords,
-            'option'   => Option::find(1)
+            'option' => Option::find(1),
         ]);
     }
 
@@ -169,55 +152,63 @@ class ProjectController extends Controller
     {
         $request->session()->put('project.id', $project->id);
         $request->session()->put('project.name', $project->name);
+
         return redirect()->action('ProjectController@dashboard');
     }
 
     public function showArchivedNotes(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.notes.archived', 1);
+
         return redirect()->action('ProjectController@notes');
     }
 
     public function hideArchivedNotes(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.notes.archived', 0);
+
         return redirect()->action('ProjectController@notes');
     }
 
     public function showArchivedContent(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.content.archived', 1);
+
         return redirect()->action('ProjectController@content');
     }
 
     public function hideArchivedContent(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.content.archived', 0);
+
         return redirect()->action('ProjectController@content');
     }
 
     public function showArchivedKeywords(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.keywords.archived', 1);
+
         return redirect()->action('ProjectController@keywords');
     }
 
     public function hideArchivedKeywords(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.keywords.archived', 0);
+
         return redirect()->action('ProjectController@keywords');
     }
 
     public function showArchivedCompetition(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.competition.archived', 1);
+
         return redirect()->action('ProjectController@competition');
     }
 
     public function hideArchivedCompetition(ViewProjectRequest $request, Project $project)
     {
         $request->session()->put('project.competition.archived', 0);
+
         return redirect()->action('ProjectController@competition');
     }
-
 }

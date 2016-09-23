@@ -7,7 +7,6 @@ use App\Competition;
 
 class DeleteCompetitionRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -15,7 +14,6 @@ class DeleteCompetitionRequest extends FormRequest
      */
     public function authorize()
     {
-
         return $this->user()->can('delete', Competition::find(request()->input('pk')));
     }
 
@@ -27,8 +25,7 @@ class DeleteCompetitionRequest extends FormRequest
     public function rules()
     {
         return [
-                //
+
         ];
     }
-
 }

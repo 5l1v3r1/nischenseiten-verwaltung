@@ -7,7 +7,6 @@ use App\Project;
 
 class AddProjectRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -26,8 +25,7 @@ class AddProjectRequest extends FormRequest
     public function rules()
     {
         return [
-                //
+
         ];
     }
-
 }

@@ -7,7 +7,6 @@ use App\Keyword;
 
 class ViewKeywordRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -26,8 +25,7 @@ class ViewKeywordRequest extends FormRequest
     public function rules()
     {
         return [
-                //
+
         ];
     }
-
 }

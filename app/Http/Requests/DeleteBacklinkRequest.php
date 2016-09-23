@@ -25,7 +25,7 @@ class DeleteBacklinkRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+
         ];
     }
 }

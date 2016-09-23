@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Composers;
+namespace app\Composers;
 
 use Illuminate\View\View;
 use App\Project;
 
 class ProjectComposer
 {
-
     /**
-     * The user repository implementation.
+     * The project repository implementation.
      *
      * @var Projects
      */
@@ -18,8 +17,7 @@ class ProjectComposer
     /**
      * Create a new profile composer.
      *
-     * @param  Project $projects
-     * @return void
+     * @param Project $projects
      */
     public function __construct(Project $projects)
     {
@@ -30,12 +28,10 @@ class ProjectComposer
     /**
      * Bind data to the view.
      *
-     * @param  View  $view
-     * @return void
+     * @param View $view
      */
     public function compose(View $view)
     {
         $view->with('projects', $this->projects);
     }
-
 }

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class PartnerProgram extends Model
 {
-
     /**
      * Get all ideas (and its amount) this program has.
      */
@@ -22,5 +21,4 @@ class PartnerProgram extends Model
     {
         return $this->hasOne('App\User', 'id', 'user_id');
     }
-
 }

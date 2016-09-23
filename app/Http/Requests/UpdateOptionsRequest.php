@@ -24,7 +24,7 @@ class UpdateOptionsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+
         ];
     }
 }

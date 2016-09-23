@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UpdateUserProfileRequest;
 use App\Http\Requests\AutoLoginRequest;
@@ -14,19 +12,16 @@ use App\Http\Requests\ViewUserlistRequest;
 
 class UserController extends Controller
 {
-
     public function showUserlist(ViewUserlistRequest $request)
     {
-
         return view('users.index', [
-            'userlist'  => User::all(),
+            'userlist' => User::all(),
             'grouplist' => Role::all(),
         ]);
     }
 
     public function updateProfile()
     {
-
         return view('profile.edit', [
         ]);
     }
@@ -35,21 +30,16 @@ class UserController extends Controller
     {
         $user = User::find(Auth::user()->id);
 
-        $user->name  = $request->input('name');
+        $user->name = $request->input('name');
         $user->email = $request->input('email');
 
-        if (trim($request->input('password')) !== '')
-        {
+        if (trim($request->input('password')) !== '') {
             $user->password = Hash::make($request->input('password'));
         }
 
-
-        if ($user->save())
-        {
+        if ($user->save()) {
             $request->session()->flash('status', 'Das Profil wurde aktualisiert.');
-        }
-        else
-        {
+        } else {
             $request->session()->flash('status', 'Profil wurde nicht aktualisiert.');
         }
 
@@ -63,5 +53,4 @@ class UserController extends Controller
 
         return redirect()->action('DashboardController@index');
     }
-
 }

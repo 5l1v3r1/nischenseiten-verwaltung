@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-
     /**
      * Get the owner of this project.
      */
@@ -14,5 +13,4 @@ class Project extends Model
     {
         return $this->hasOne('App\User', 'id', 'user_id');
     }
-
 }

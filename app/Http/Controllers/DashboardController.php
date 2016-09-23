@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 class DashboardController extends Controller
 {
-
     /**
      * Show the application dashboard.
      *
@@ -14,5 +13,4 @@ class DashboardController extends Controller
     {
         return view('dashboard');
     }
-
 }

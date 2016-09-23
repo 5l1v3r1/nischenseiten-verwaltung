@@ -7,7 +7,6 @@ use App\Idea;
 
 class AddIdeaRequest extends FormRequest
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -15,7 +14,6 @@ class AddIdeaRequest extends FormRequest
      */
     public function authorize()
     {
-
         return $this->user()->can('create', Idea::class);
     }
 
@@ -29,5 +27,4 @@ class AddIdeaRequest extends FormRequest
         return [
         ];
     }
-
 }
