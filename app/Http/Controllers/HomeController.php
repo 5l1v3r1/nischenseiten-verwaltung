@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
-     * Redirect to application dashboard
+     * Redirect to application dashboard.
      *
      * @return \Illuminate\Http\RedirectResponse
      */
