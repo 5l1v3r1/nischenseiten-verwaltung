@@ -16,6 +16,7 @@ use App\Helpers\ViewHelper;
 
 class ProjectApiController extends Controller
 {
+
     public function insertEntry(AddProjectRequest $request, Project $project)
     {
         $project = new Project();
@@ -68,7 +69,7 @@ class ProjectApiController extends Controller
     public function updateRankings(ViewProjectRequest $request, Project $project)
     {
         $cache_name = md5(
-                $request->session()->get('project.id').'-ranking-'.$request->session()->get('project.name')
+                $request->session()->get('project.id') . '-ranking-' . $request->session()->get('project.name')
         );
 
         Cache::forget($cache_name);
@@ -76,7 +77,7 @@ class ProjectApiController extends Controller
         $option = Option::find(1);
 
         $api = new Api($option->value, $request->session()->get('project.name'));
-        $api->get_rankings();
+        $api->getRankings();
 
         if (!is_null($api->credits_left) && $api->credits_left > -1) {
             $option->credits = $api->credits_left;
@@ -95,7 +96,7 @@ class ProjectApiController extends Controller
     {
         $status = 0;
         $cache_name = md5(
-                $request->session()->get('project.id').'-si-'.$request->session()->get('project.name')
+                $request->session()->get('project.id') . '-si-' . $request->session()->get('project.name')
         );
 
         $project_url = ViewHelper::cleanUrl($request->session()->get('project.name'));
@@ -104,7 +105,7 @@ class ProjectApiController extends Controller
         }
         $option = Option::find(1);
         $api = new Api($option->value, $project_url);
-        $api->get_searchindex_data();
+        $api->getSearchindexData();
 
         if (!is_null($api->credits_left) && $api->credits_left > -1) {
             $option->credits = $api->credits_left;

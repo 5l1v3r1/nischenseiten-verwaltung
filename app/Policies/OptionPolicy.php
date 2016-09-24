@@ -6,6 +6,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 
 class OptionPolicy
 {
+
     use HandlesAuthorization;
 
     /**
@@ -13,5 +14,6 @@ class OptionPolicy
      */
     public function __construct()
     {
+        
     }
 }

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class IdeasController extends Controller
 {
+
     public function updateNotes(ViewIdeaRequest $request, Idea $idea)
     {
         return view('ideas.notes', [
@@ -110,7 +111,7 @@ class IdeasController extends Controller
         }
 
         $ideas = DB::table('ideas')
-                ->select(DB::raw('ideas.*, idea_categories.id as category_id, idea_categories.name as category_name, partner_programs.id as partner_id, partner_programs.name as partner_name, '.$sorter_sql.' as sortorder'))
+                ->select(DB::raw('ideas.*, idea_categories.id as category_id, idea_categories.name as category_name, partner_programs.id as partner_id, partner_programs.name as partner_name, ' . $sorter_sql . ' as sortorder'))
                 ->where($where)
                 ->leftJoin('idea_categories', 'idea_categories.id', '=', 'ideas.idea_category_id')
                 ->leftJoin('partner_programs', 'partner_programs.id', '=', 'ideas.partner_program_id')

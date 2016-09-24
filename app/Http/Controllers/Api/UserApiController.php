@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserApiController extends Controller
 {
+
     public function insertEntry(AddUserlistRequest $request, User $user)
     {
         $user = User::create([

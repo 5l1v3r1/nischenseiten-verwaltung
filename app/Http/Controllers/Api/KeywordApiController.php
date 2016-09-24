@@ -12,6 +12,7 @@ use App\Option;
 
 class KeywordApiController extends Controller
 {
+
     public function insertEntry(AddKeywordRequest $request, Keyword $keyword)
     {
         $keyword = new Keyword();
@@ -102,7 +103,7 @@ class KeywordApiController extends Controller
 
         $option = Option::find(1);
         $api = new Api($option->value, $keyword->name);
-        $api->get_keyword_data();
+        $api->getKeywordData();
 
         if (!is_null($api->credits_left) && $api->credits_left > -1) {
             $option->credits = $api->credits_left;

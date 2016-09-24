@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Competition extends Model
 {
+
     /**
      * Get the project of this competition entry.
      */

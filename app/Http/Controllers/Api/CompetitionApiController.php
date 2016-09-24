@@ -10,6 +10,7 @@ use App\Http\Requests\DeleteCompetitionRequest;
 
 class CompetitionApiController extends Controller
 {
+
     public function insertEntry(AddCompetitionRequest $request, Competition $competition)
     {
         $competition = new Competition();

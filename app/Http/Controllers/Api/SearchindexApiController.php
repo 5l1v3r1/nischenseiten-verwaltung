@@ -6,4 +6,5 @@ use App\Http\Controllers\Controller;
 
 class SearchindexApiController extends Controller
 {
+    
 }

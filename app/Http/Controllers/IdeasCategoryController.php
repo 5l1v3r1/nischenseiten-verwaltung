@@ -1,12 +1,13 @@
 <?php
 
-namespace app\Http\Controllers;
+namespace App\Http\Controllers;
 
 use App\Http\Requests\ViewCategoryRequest;
 use App\IdeaCategory;
 
 class IdeasCategoryController extends Controller
 {
+
     /**
      * Show the categories.
      *

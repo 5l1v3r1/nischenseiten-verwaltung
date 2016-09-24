@@ -12,6 +12,7 @@ use App\Linkchecker\Checker\Checker;
 
 class BacklinkApiController extends Controller
 {
+
     public function insertEntry(AddBacklinkRequest $request, Backlink $backlink)
     {
         $backlink = new Backlink();

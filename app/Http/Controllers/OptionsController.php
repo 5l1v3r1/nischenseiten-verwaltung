@@ -8,6 +8,7 @@ use App\Metricstools\Api\Api;
 
 class OptionsController extends Controller
 {
+
     public function updateOptions()
     {
         return view('options.edit', [
@@ -29,7 +30,7 @@ class OptionsController extends Controller
 
         if ($request->input('apimetrics') != '') {
             $api = new Api($option->value);
-            $api->get_credit_count();
+            $api->getCreditCount();
 
             if (!is_null($api->credits_left) && $api->credits_left > -1) {
                 $option->credits = $api->credits_left;
@@ -38,7 +39,7 @@ class OptionsController extends Controller
             }
 
             if ($api->error != '') {
-                $errors_api[] = 'API Metrics antwortet mit: '.$api->error;
+                $errors_api[] = 'API Metrics antwortet mit: ' . $api->error;
             }
         } else {
             $option->credits = 0;

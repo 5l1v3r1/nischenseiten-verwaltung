@@ -1,12 +1,13 @@
 <?php
 
-namespace app\Composers;
+namespace App\Composers;
 
 use Illuminate\View\View;
 use App\Project;
 
 class ProjectComposer
 {
+
     /**
      * The project repository implementation.
      *

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class IdeasCategoryApiController extends Controller
 {
+
     public function insertEntry(AddCategoryRequest $request, IdeaCategory $ideacategory)
     {
         $ideacategory = new IdeaCategory();

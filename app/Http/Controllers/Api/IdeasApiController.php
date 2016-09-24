@@ -13,6 +13,7 @@ use App\Option;
 
 class IdeasApiController extends Controller
 {
+
     public function insertEntry(AddIdeaRequest $request, Idea $idea)
     {
         $idea = new Idea();
@@ -187,7 +188,7 @@ class IdeasApiController extends Controller
 
         $option = Option::find(1);
         $api = new Api($option->value, $idea->name);
-        $api->get_keyword_data();
+        $api->getKeywordData();
 
         if (!is_null($api->credits_left) && $api->credits_left > -1) {
             $option->credits = $api->credits_left;

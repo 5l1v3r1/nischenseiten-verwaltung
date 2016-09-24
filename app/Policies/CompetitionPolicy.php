@@ -8,6 +8,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 
 class CompetitionPolicy
 {
+
     use HandlesAuthorization;
 
     /**

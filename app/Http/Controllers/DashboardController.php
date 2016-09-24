@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 class DashboardController extends Controller
 {
+
     /**
      * Show the application dashboard.
      *

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Controllers;
+namespace App\Http\Controllers;
 
 use App\Option;
 use App\Project;
@@ -16,6 +16,7 @@ use Carbon\Carbon;
 
 class CronjobController extends Controller
 {
+
     /**
      * @var string
      */
@@ -92,12 +93,13 @@ class CronjobController extends Controller
 
         $projects = Project::whereNotNull('name')->get();
 
-        foreach ($projects as $project) {
+        foreach ($projects as $project)
+        {
             $api->input = ViewHelper::cleanUrl($project->name);
 
-            $api->get_rankings();
+            $api->getRankings();
 
-            $cache_name = md5($project->id.'-ranking-'.$project->name);
+            $cache_name = md5($project->id . '-ranking-' . $project->name);
 
             if ($api->status == 200 && !empty($api->data['values'])) {
                 Cache::forget($cache_name);
@@ -106,7 +108,7 @@ class CronjobController extends Controller
                 $project->updated_at = Carbon::now();
                 $project->save();
             } else {
-                Log::info($project->name.' - rankings(): keine Daten via API gefunden!');
+                Log::info($project->name . ' - rankings(): keine Daten via API gefunden!');
                 Cache::forget($cache_name);
             }
 
@@ -134,14 +136,15 @@ class CronjobController extends Controller
         $api = new Api($this->apikey);
 
         $keywords = Keyword::whereNotNull('name')
-                ->whereRaw('DATEDIFF(NOW(),updated_at)>'.$this->keywords_ttl)
+                ->whereRaw('DATEDIFF(NOW(),updated_at)>' . $this->keywords_ttl)
                 ->take($this->keywords_count)
                 ->get();
 
-        foreach ($keywords as $keyword) {
+        foreach ($keywords as $keyword)
+        {
             $api->input = $keyword->name;
 
-            $api->get_keyword_data();
+            $api->getKeywordData();
 
             if ($api->status == 200 && !empty($api->data['values'])) {
                 $keyword->searchvolume = $api->data['values']['searchvolume'];
@@ -149,7 +152,7 @@ class CronjobController extends Controller
                 $keyword->competition = $api->data['values']['competition'];
                 $keyword->save();
             } else {
-                Log::info($keyword->name.' - keywords(): keine Daten via API gefunden!');
+                Log::info($keyword->name . ' - keywords(): keine Daten via API gefunden!');
             }
 
             sleep(1);
@@ -177,12 +180,13 @@ class CronjobController extends Controller
 
         $projects = Project::whereNotNull('name')->get();
 
-        foreach ($projects as $project) {
+        foreach ($projects as $project)
+        {
             $api->input = ViewHelper::cleanUrl($project->name);
 
-            $api->get_searchindex_data();
+            $api->getSearchindexData();
 
-            $cache_name = md5($project->id.'-si-'.$project->name);
+            $cache_name = md5($project->id . '-si-' . $project->name);
 
             if ($api->status == 200 && !empty($api->data['values'])) {
                 Cache::forget($cache_name);
@@ -191,7 +195,7 @@ class CronjobController extends Controller
                 $project->updated_at = Carbon::now();
                 $project->save();
             } else {
-                Log::info($project->name.' - searchindex(): keine Daten via API gefunden!');
+                Log::info($project->name . ' - searchindex(): keine Daten via API gefunden!');
                 Cache::forget($cache_name);
             }
 
@@ -203,6 +207,7 @@ class CronjobController extends Controller
             $this->option->save();
         }
     }
+
     /**
      * CronjobController:searchindex().
      *
@@ -213,14 +218,15 @@ class CronjobController extends Controller
     {
         $backlinks = Backlink::whereNotNull('linksource')
                 ->whereNotNull('linktarget')
-                ->whereRaw('DATEDIFF(NOW(),checked_at)>'.$this->backlink_ttl)
+                ->whereRaw('DATEDIFF(NOW(),checked_at)>' . $this->backlink_ttl)
                 ->take($this->backlink_count)
                 ->select(['id', 'linksource', 'linktarget', 'checked_at'])
                 ->get();
 
         $linkchecker = new Checker();
 
-        foreach ($backlinks as $backlink) {
+        foreach ($backlinks as $backlink)
+        {
             $linkchecker->source = $backlink->linksource;
             $linkchecker->target = $backlink->linktarget;
             $linkchecker->check();
@@ -247,14 +253,15 @@ class CronjobController extends Controller
         $api = new Api($this->apikey);
 
         $keywords = Idea::whereNotNull('name')
-                ->whereRaw('DATEDIFF(NOW(),updated_at)>'.$this->ideas_ttl)
+                ->whereRaw('DATEDIFF(NOW(),updated_at)>' . $this->ideas_ttl)
                 ->take($this->ideas_count)
                 ->get();
 
-        foreach ($keywords as $keyword) {
+        foreach ($keywords as $keyword)
+        {
             $api->input = $keyword->name;
 
-            $api->get_keyword_data();
+            $api->getKeywordData();
 
             if ($api->status == 200 && !empty($api->data['values'])) {
                 $keyword->searchvolume = $api->data['values']['searchvolume'];
@@ -262,7 +269,7 @@ class CronjobController extends Controller
                 $keyword->competition = $api->data['values']['competition'];
                 $keyword->save();
             } else {
-                Log::info($keyword->name.' - ideas(): keine Daten via API gefunden!');
+                Log::info($keyword->name . ' - ideas(): keine Daten via API gefunden!');
             }
 
             sleep(1);

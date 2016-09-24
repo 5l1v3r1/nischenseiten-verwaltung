@@ -1,12 +1,13 @@
 <?php
 
-namespace app\Composers;
+namespace App\Composers;
 
 use Illuminate\View\View;
 use App\Option;
 
 class ApiComposer
 {
+
     /**
      * The optiontable repository implementation.
      *

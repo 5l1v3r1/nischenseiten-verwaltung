@@ -10,6 +10,7 @@ use App\Http\Requests\DeleteContentRequest;
 
 class ContentApiController extends Controller
 {
+
     public function insertEntry(AddContentRequest $request, Content $content)
     {
         $content = new Content();

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PartnerProgramApiController extends Controller
 {
+
     public function insertEntry(AddPartnerProgramRequest $request, PartnerProgram $pp)
     {
         $pp = new PartnerProgram();

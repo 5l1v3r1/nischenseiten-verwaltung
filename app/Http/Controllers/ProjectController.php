@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Cache;
 
 class ProjectController extends Controller
 {
+
     public function showEntries(ViewProjectlistRequest $request, Project $project)
     {
         if (Auth::user()->role->level > 90) {
@@ -35,17 +36,17 @@ class ProjectController extends Controller
         $project_id = $request->session()->get('project.id');
 
         $cache_name = md5(
-                $request->session()->get('project.id').'-si-'.$request->session()->get('project.name')
+            $request->session()->get('project.id') . '-si-' . $request->session()->get('project.name')
         );
 
-        $si = json_decode(Cache::get($cache_name), true);
+        $searchindex = json_decode(Cache::get($cache_name), true);
 
         return view('project.dashboard', [
             'notes' => Note::all()->where('project_id', $project_id)->count(),
             'contentideas' => Content::all()->where('project_id', $project_id)->count(),
             'competitors' => Competition::all()->where('project_id', $project_id)->count(),
             'keywords' => Keyword::all()->where('project_id', $project_id)->count(),
-            'metrics_si' => $si,
+            'metrics_si' => $searchindex,
         ]);
     }
 
@@ -131,7 +132,7 @@ class ProjectController extends Controller
     public function rankings(ViewProjectRequest $request, Project $project)
     {
         $cache_name = md5(
-                $request->session()->get('project.id').'-ranking-'.$request->session()->get('project.name')
+            $request->session()->get('project.id') . '-ranking-' . $request->session()->get('project.name')
         );
 
         $keywords = json_decode(Cache::get($cache_name), true);

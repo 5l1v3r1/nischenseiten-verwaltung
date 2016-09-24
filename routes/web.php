@@ -19,16 +19,14 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->middleware('auth');
 
-Route::group(['middleware' => 'auth', 'prefix' => 'ideas'], function ()
-{
+Route::group(['middleware' => 'auth', 'prefix' => 'ideas'], function () {
     Route::get('index', 'IdeasController@index');
     Route::post('index', 'IdeasController@postIdeaSearch');
     Route::get('notes/{idea}', 'IdeasController@updateNotes')->where('idea', '^[1-9][0-9]*$')->name('idea.notes');
     Route::post('notes', 'IdeasController@postUpdateIdea');
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'settings'], function ()
-{
+Route::group(['middleware' => 'auth', 'prefix' => 'settings'], function () {
     Route::get('categories/index', 'IdeasCategoryController@showEntries');
     Route::get('partnerprograms/index', 'PartnerProgramController@showEntries');
     Route::get('projects/index', 'ProjectController@showEntries');
@@ -37,15 +35,13 @@ Route::group(['middleware' => 'auth', 'prefix' => 'settings'], function ()
     Route::post('apis/index', 'OptionsController@postUpdateOptions');
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'user'], function ()
-{
+Route::group(['middleware' => 'auth', 'prefix' => 'user'], function () {
     Route::get('profile', 'UserController@updateProfile');
     Route::post('profile', 'UserController@postUpdateProfile');
     Route::get('autologin/{user}', 'UserController@loginWithID')->where('user', '^[1-9][0-9]*$');
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'project'], function ()
-{
+Route::group(['middleware' => 'auth', 'prefix' => 'project'], function () {
     Route::get('dashboard', 'ProjectController@dashboard');
     Route::get('notes', 'ProjectController@notes');
     Route::get('content', 'ProjectController@content');
@@ -60,10 +56,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'project'], function ()
     Route::get('content/hidearchived', 'ProjectController@hideArchivedContent');
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'idea'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'idea'], function () {
         Route::post('insert', 'Api\IdeasApiController@insertEntry');
         Route::post('update/topic', 'Api\IdeasApiController@updateName');
         Route::post('update/sv', 'Api\IdeasApiController@updateSearchVolume');
@@ -84,10 +78,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'category'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'category'], function () {
         Route::get('get', 'Api\IdeasCategoryApiController@getCategories');
         Route::post('insert', 'Api\IdeasCategoryApiController@insertEntry');
         Route::post('update/name', 'Api\IdeasCategoryApiController@updateName');
@@ -96,10 +88,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'partnerprogram'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'partnerprogram'], function () {
         Route::get('get', 'Api\PartnerProgramApiController@getPartnerPrograms');
         Route::post('insert', 'Api\PartnerProgramApiController@insertEntry');
         Route::post('update/name', 'Api\PartnerProgramApiController@updateName');
@@ -108,10 +98,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'project'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'project'], function () {
         Route::post('insert', 'Api\ProjectApiController@insertEntry');
         Route::post('update/name', 'Api\ProjectApiController@updateName');
         Route::post('update/notes', 'Api\ProjectApiController@updateNotes');
@@ -121,10 +109,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'project'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'project'], function () {
         Route::post('insert/note', 'Api\NoteApiController@insertEntry');
         Route::post('update/note/name', 'Api\NoteApiController@updateName');
         Route::post('update/note/content', 'Api\NoteApiController@updateContent');
@@ -135,10 +121,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'project'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'project'], function () {
         Route::post('insert/content', 'Api\ContentApiController@insertEntry');
         Route::post('update/content/name', 'Api\ContentApiController@updateName');
         Route::post('update/content/note', 'Api\ContentApiController@updateNote');
@@ -149,10 +133,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'project'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'project'], function () {
         Route::post('insert/competition', 'Api\CompetitionApiController@insertEntry');
         Route::post('update/competition/url', 'Api\CompetitionApiController@updateUrl');
         Route::post('update/competition/note', 'Api\CompetitionApiController@updateNote');
@@ -161,10 +143,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'project'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'project'], function () {
         Route::post('insert/keyword', 'Api\KeywordApiController@insertEntry');
         Route::post('update/keyword/name', 'Api\KeywordApiController@updateName');
         Route::post('update/keyword/sv', 'Api\KeywordApiController@updateSV');
@@ -177,18 +157,14 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group([ 'prefix' => 'project'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'project'], function () {
         Route::post('update/rankings', 'Api\ProjectApiController@updateRankings');
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'project'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'project'], function () {
         Route::post('insert/backlink', 'Api\BacklinkApiController@insertEntry');
         Route::post('update/backlink/linksource', 'Api\BacklinkApiController@updateSource');
         Route::post('update/backlink/linktarget', 'Api\BacklinkApiController@updateTarget');
@@ -200,10 +176,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
-    Route::group(['prefix' => 'user'], function ()
-    {
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
+    Route::group(['prefix' => 'user'], function () {
         Route::post('insert', 'Api\UserApiController@insertEntry');
         Route::post('update/name', 'Api\UserApiController@updateName');
         Route::post('update/email', 'Api\UserApiController@updateEmail');
@@ -213,13 +187,11 @@ Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
     });
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function ()
-{
+Route::group(['middleware' => 'auth', 'prefix' => 'api/v1'], function () {
     Route::get('roles/get', 'Api\RoleApiController@getRoles');
 });
 
-Route::group(['prefix' => 'cronjob'], function ()
-{
+Route::group(['prefix' => 'cronjob'], function () {
     Route::get('backlinks', 'CronjobController@backlinks');
     Route::get('rankings', 'CronjobController@rankings');
     Route::get('searchindex', 'CronjobController@searchindex');

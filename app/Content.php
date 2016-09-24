@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Content extends Model
 {
+
     use SoftDeletes;
 
     /**

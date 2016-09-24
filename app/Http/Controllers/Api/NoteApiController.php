@@ -10,6 +10,7 @@ use App\Http\Requests\DeleteNoteRequest;
 
 class NoteApiController extends Controller
 {
+
     public function insertEntry(AddNoteRequest $request, Note $note)
     {
         $note = new Note();

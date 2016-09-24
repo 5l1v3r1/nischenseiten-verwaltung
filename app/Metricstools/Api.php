@@ -4,16 +4,53 @@ namespace App\Metricstools\Api;
 
 use GuzzleHttp\Client;
 
+/**
+ * Simple metrics.tools api implementation
+ */
 class Api
 {
+
+    /**
+     * @var string $key
+     */
     private $key = '';
+
+    /**
+     * @var \GuzzleHttp\Client $guzzle
+     */
     private $guzzle = null;
+
+    /**
+     * @var string $input
+     */
     public $input = '';
+
+    /**
+     * @var int $status
+     */
     public $status;
+
+    /**
+     * @var array $data
+     */
     public $data = [];
+
+    /**
+     * @var int $credits_left
+     */
     public $credits_left = null;
+
+    /**
+     * @var string $error
+     */
     public $error = '';
 
+    /**
+     * Load important data for this object
+     *
+     * @param string $key metrics.tools API Key
+     * @param string $input keyword or domainhost
+     */
     public function __construct($key, $input = '')
     {
         $this->guzzle = new Client();
@@ -21,7 +58,13 @@ class Api
         $this->input = $input;
     }
 
-    public function get_keyword_data()
+    /**
+     * Get searchvolume, cpc, competition for a keyword
+     *
+     * @return void Data is within publicly accessible variables ($data)
+     * @throws Exception when server blocks request
+     */
+    public function getKeywordData()
     {
         try {
             $this->checkInput();
@@ -47,7 +90,13 @@ class Api
         }
     }
 
-    public function get_credit_count()
+    /**
+     * Get amount of credits left for this key
+     *
+     * @return void Data is within publicly accessible variables ($data)
+     * @throws Exception when server blocks request
+     */
+    public function getCreditCount()
     {
         try {
             $res = $this->guzzle->request('GET', 'https://metrics.tools/metricstools/api/domain', [
@@ -72,7 +121,13 @@ class Api
         }
     }
 
-    public function get_rankings()
+    /**
+     * Get Top 500 Rankings for a given domainhost
+     *
+     * @return void Data is within publicly accessible variables ($data)
+     * @throws Exception when server blocks request
+     */
+    public function getRankings()
     {
         try {
             $this->checkInput();
@@ -101,7 +156,13 @@ class Api
         }
     }
 
-    public function get_searchindex_data()
+    /**
+     * Get the searchindex (index per day) for a given domain
+     *
+     * @return void Data is within publicly accessible variables ($data)
+     * @throws Exception when server blocks request
+     */
+    public function getSearchindexData()
     {
         try {
             $this->checkInput();
@@ -128,6 +189,12 @@ class Api
         }
     }
 
+    /**
+     * We need an input, therefor check if it exsists
+     *
+     * @return void
+     * @throws Exception when input is empty
+     */
     private function checkInput()
     {
         if ($this->input == '') {
@@ -135,6 +202,14 @@ class Api
         }
     }
 
+    /**
+     * metrics.tools works only with the domain name without subdomain
+     *
+     * IMPORTANT: if a project looks like this: www.projekt.de AND blog.projekt.de
+     * than theres no problem fetching data for blog.projekt.de
+     *
+     * @return void
+     */
     private function stripWWW()
     {
         $this->input = str_ireplace(['www.'], '', $this->input);

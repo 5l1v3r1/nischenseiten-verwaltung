@@ -12,6 +12,7 @@ use App\Http\Requests\ViewUserlistRequest;
 
 class UserController extends Controller
 {
+
     public function showUserlist(ViewUserlistRequest $request)
     {
         return view('users.index', [
