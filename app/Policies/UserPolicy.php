@@ -15,7 +15,7 @@ class UserPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function make_auto_login(User $user)
     {
@@ -35,7 +35,7 @@ class UserPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user)
     {
@@ -51,7 +51,7 @@ class UserPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -67,7 +67,7 @@ class UserPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, User $current_user)
     {
@@ -96,7 +96,7 @@ class UserPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user)
     {

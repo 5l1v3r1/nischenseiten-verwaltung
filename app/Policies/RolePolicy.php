@@ -16,7 +16,7 @@ class RolePolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user)
     {

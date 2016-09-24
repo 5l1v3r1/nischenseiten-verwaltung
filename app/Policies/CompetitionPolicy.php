@@ -17,7 +17,7 @@ class CompetitionPolicy
      * @param App\User        $user
      * @param App\Competition $competition
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, Competition $competition)
     {
@@ -29,7 +29,7 @@ class CompetitionPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -42,7 +42,7 @@ class CompetitionPolicy
      * @param App\User        $user
      * @param App\Competition $competition
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, Competition $competition)
     {
@@ -63,7 +63,7 @@ class CompetitionPolicy
      * @param App\User        $user
      * @param App\Competition $competition
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, Competition $competition)
     {

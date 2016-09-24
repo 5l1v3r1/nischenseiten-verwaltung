@@ -17,7 +17,7 @@ class BacklinkPolicy
      * @param App\User     $user
      * @param App\Backlink $backlink
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, Backlink $backlink)
     {
@@ -29,7 +29,7 @@ class BacklinkPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -42,7 +42,7 @@ class BacklinkPolicy
      * @param App\User     $user
      * @param App\Backlink $backlink
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, Backlink $backlink)
     {
@@ -63,7 +63,7 @@ class BacklinkPolicy
      * @param App\User     $user
      * @param App\Backlink $backlink
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, Backlink $backlink)
     {

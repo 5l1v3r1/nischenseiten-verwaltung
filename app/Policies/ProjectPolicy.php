@@ -17,7 +17,7 @@ class ProjectPolicy
      * @param App\User    $user
      * @param App\Project $project
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, Project $project)
     {
@@ -43,7 +43,7 @@ class ProjectPolicy
      * @param App\User    $user
      * @param App\Project $project
      *
-     * @return mixed
+     * @return bool
      */
     public function change_project(User $user, Project $project)
     {
@@ -63,7 +63,7 @@ class ProjectPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -76,7 +76,7 @@ class ProjectPolicy
      * @param App\User    $user
      * @param App\Project $project
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, Project $project)
     {
@@ -97,7 +97,7 @@ class ProjectPolicy
      * @param App\User    $user
      * @param App\Project $project
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, Project $project)
     {

@@ -17,7 +17,7 @@ class IdeaPolicy
      * @param App\User $user
      * @param App\Idea $idea
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, Idea $idea)
     {
@@ -29,7 +29,7 @@ class IdeaPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -42,7 +42,7 @@ class IdeaPolicy
      * @param App\User $user
      * @param App\Idea $idea
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, Idea $idea)
     {
@@ -63,7 +63,7 @@ class IdeaPolicy
      * @param App\User $user
      * @param App\Idea $idea
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, Idea $idea)
     {

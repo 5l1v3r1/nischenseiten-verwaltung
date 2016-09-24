@@ -17,7 +17,7 @@ class KeywordPolicy
      * @param App\User    $user
      * @param App\Keyword $keyword
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, Keyword $keyword)
     {
@@ -29,7 +29,7 @@ class KeywordPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -42,7 +42,7 @@ class KeywordPolicy
      * @param App\User    $user
      * @param App\Keyword $keyword
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, Keyword $keyword)
     {
@@ -62,7 +62,7 @@ class KeywordPolicy
      * @param App\User    $user
      * @param App\Keyword $keyword
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, Keyword $keyword)
     {

@@ -17,7 +17,7 @@ class NotePolicy
      * @param App\User $user
      * @param App\Note $note
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, Note $note)
     {
@@ -29,7 +29,7 @@ class NotePolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -42,7 +42,7 @@ class NotePolicy
      * @param App\User $user
      * @param App\Note $note
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, Note $note)
     {
@@ -62,7 +62,7 @@ class NotePolicy
      * @param App\User $user
      * @param App\Note $note
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, Note $note)
     {

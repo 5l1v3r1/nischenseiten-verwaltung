@@ -17,7 +17,7 @@ class PartnerProgramPolicy
      * @param App\User           $user
      * @param App\PartnerProgram $partner_program
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, PartnerProgram $partner_program)
     {
@@ -33,7 +33,7 @@ class PartnerProgramPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -50,7 +50,7 @@ class PartnerProgramPolicy
      * @param App\User           $user
      * @param App\PartnerProgram $partner_program
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, PartnerProgram $partner_program)
     {
@@ -67,7 +67,7 @@ class PartnerProgramPolicy
      * @param App\User           $user
      * @param App\PartnerProgram $partner_program
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, PartnerProgram $partner_program)
     {

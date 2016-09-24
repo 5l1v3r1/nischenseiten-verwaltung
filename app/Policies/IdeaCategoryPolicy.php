@@ -17,7 +17,7 @@ class IdeaCategoryPolicy
      * @param App\User         $user
      * @param App\IdeaCategory $ideacategory
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, IdeaCategory $ideacategory)
     {
@@ -33,7 +33,7 @@ class IdeaCategoryPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -50,7 +50,7 @@ class IdeaCategoryPolicy
      * @param App\User         $user
      * @param App\IdeaCategory $ideacategory
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, IdeaCategory $ideacategory)
     {
@@ -67,7 +67,7 @@ class IdeaCategoryPolicy
      * @param App\User         $user
      * @param App\IdeaCategory $ideacategory
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, IdeaCategory $ideacategory)
     {

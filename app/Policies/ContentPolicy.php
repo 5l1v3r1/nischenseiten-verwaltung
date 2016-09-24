@@ -17,7 +17,7 @@ class ContentPolicy
      * @param App\User    $user
      * @param App\Content $content
      *
-     * @return mixed
+     * @return bool
      */
     public function view(User $user, Content $content)
     {
@@ -29,7 +29,7 @@ class ContentPolicy
      *
      * @param App\User $user
      *
-     * @return mixed
+     * @return bool
      */
     public function create(User $user)
     {
@@ -42,7 +42,7 @@ class ContentPolicy
      * @param App\User    $user
      * @param App\Content $content
      *
-     * @return mixed
+     * @return bool
      */
     public function update(User $user, Content $content)
     {
@@ -63,7 +63,7 @@ class ContentPolicy
      * @param App\User    $user
      * @param App\Content $content
      *
-     * @return mixed
+     * @return bool
      */
     public function delete(User $user, Content $content)
     {
