@@ -150,11 +150,15 @@ class CronjobController extends Controller
                 $keyword->searchvolume = $api->data['values']['searchvolume'];
                 $keyword->cpc = $api->data['values']['cpc'];
                 $keyword->competition = $api->data['values']['competition'];
-                $keyword->save();
+                Log::info($keyword->name . ' - keywords(): Erfolg!');
+
             } else {
                 Log::info($keyword->name . ' - keywords(): keine Daten via API gefunden!');
             }
 
+            $keyword->updated_at = Carbon::now();
+            $keyword->save();
+                
             sleep(1);
         }
 
@@ -194,6 +198,8 @@ class CronjobController extends Controller
 
                 $project->updated_at = Carbon::now();
                 $project->save();
+                Log::info($project->name . ' - searchindex(): Erfolg!');
+
             } else {
                 Log::info($project->name . ' - searchindex(): keine Daten via API gefunden!');
                 Cache::forget($cache_name);
@@ -267,11 +273,14 @@ class CronjobController extends Controller
                 $keyword->searchvolume = $api->data['values']['searchvolume'];
                 $keyword->cpc = $api->data['values']['cpc'];
                 $keyword->competition = $api->data['values']['competition'];
-                $keyword->save();
+                Log::info($keyword->name . ' - ideas(): Erfolg.');
             } else {
                 Log::info($keyword->name . ' - ideas(): keine Daten via API gefunden!');
             }
-
+            
+            $keyword->updated_at = Carbon::now();
+            $keyword->save();
+            
             sleep(1);
         }
 
